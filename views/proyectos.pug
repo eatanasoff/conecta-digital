@@ -21,7 +21,11 @@ block content
       h1 Proyectos
       p.lead
         | Estás en la página #{title}. Aquí irá un feed con los proyectos.
-      a.btn.btn-lg.btn-primary(href='#' role='button') Botón &raquo;
+      ul
+        each encuesta in data
+          li= encuesta.form_response.answers[1].choice.label
+        else
+          li There are no values
     .container
 
   footer

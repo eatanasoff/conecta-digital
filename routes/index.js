@@ -8,14 +8,50 @@ var url = 'mongodb://user:password@localhost:27017/conecta';
 
 /* GET home page. */
 router.get('/', function (req, res, next) {
+  console.log('Home');
   res.render('index', { title: 'Home' });
 });
 
 /* Nosotros. */
 router.get('/proyectos', function (req, res, next) {
-  // query mongo
-  res.render('proyectos', { title: 'Proyectos' }); // array : array
+  var encuestas = [];
+  MongoClient.connect(url, function (err, db) {
+    if (err) throw err;
+    var dbo = db.db('conecta');
+
+    var query = {};
+    dbo
+      .collection('test')
+      .find(query)
+      .toArray(function (err, result) {
+        if (err) throw err;
+
+        for (var i = 0; i < 10; i++) {
+          console.log(
+            '-----' + result[0].form_response.definition.fields[i].title
+          );
+          if (result[0].form_response.answers[i].choice != undefined)
+            console.log(result[0].form_response.answers[i].choice.label);
+          if (result[0].form_response.answers[i].email != undefined)
+            console.log(result[0].form_response.answers[i].email);
+          if (result[0].form_response.answers[i].boolean != undefined)
+            console.log(result[0].form_response.answers[i].boolean);
+          if (result[0].form_response.answers[i].text != undefined)
+            console.log(result[0].form_response.answers[i].text);
+        }
+        encuestas = result.map((i) => ({ ...i }));
+        db.close();
+        console.log(encuestas);
+        console.log('despues de cerrar DB');
+        res.render('proyectos', {
+          title: 'Proyectos',
+          data: encuestas,
+        });
+      });
+  }); // array : array
 });
+/*
+ */
 
 /* Servicios. */
 router.get('/voluntarios', function (req, res, next) {
