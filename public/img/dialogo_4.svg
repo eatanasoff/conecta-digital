@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="299px" height="184px" viewBox="0 0 299 184" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 64 (93537) - https://sketch.com -->
+    <title>dialogo_4</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M221,0 C223.209139,-4.05812251e-16 225,1.790861 225,4 L225,59 C225,61.209139 223.209139,63 221,63 L39.261,63 L29.328269,72.9348707 C27.8186319,74.4452881 25.4016807,74.4957677 23.8311125,73.086497 L23.671731,72.9355032 C23.6716256,72.9353978 23.6715202,72.9352924 23.671731,72.9348707 L13.738,63 L4,63 C1.790861,63 2.705415e-16,61.209139 0,59 L0,4 C-2.705415e-16,1.790861 1.790861,4.05812251e-16 4,0 L221,0 Z" id="path-1"></path>
+        <filter x="-4.0%" y="-12.1%" width="115.6%" height="147.2%" filterUnits="objectBoundingBox" id="filter-2">
+            <feMorphology radius="0.5" operator="dilate" in="SourceAlpha" result="shadowSpreadOuter1"></feMorphology>
+            <feOffset dx="10" dy="10" in="shadowSpreadOuter1" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="3.5" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feComposite in="shadowBlurOuter1" in2="SourceAlpha" operator="out" result="shadowBlurOuter1"></feComposite>
+            <feColorMatrix values="0 0 0 0 0.941176471   0 0 0 0 0.949019608   0 0 0 0 0.992156863  0 0 0 1 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+        <path d="M221,0 C223.209139,-4.05812251e-16 225,1.790861 225,4 L225,59 C225,61.209139 223.209139,63 221,63 L211.261,63 L201.328269,72.9348707 C199.818632,74.4452881 197.401681,74.4957677 195.831112,73.086497 L195.671731,72.9355032 C195.671626,72.9353978 195.67152,72.9352924 195.671731,72.9348707 L185.738,63 L4,63 C1.790861,63 2.705415e-16,61.209139 0,59 L0,4 C-2.705415e-16,1.790861 1.790861,4.05812251e-16 4,0 L221,0 Z" id="path-3"></path>
+        <filter x="-4.0%" y="-12.1%" width="115.6%" height="147.2%" filterUnits="objectBoundingBox" id="filter-4">
+            <feMorphology radius="0.5" operator="dilate" in="SourceAlpha" result="shadowSpreadOuter1"></feMorphology>
+            <feOffset dx="10" dy="10" in="shadowSpreadOuter1" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="3.5" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feComposite in="shadowBlurOuter1" in2="SourceAlpha" operator="out" result="shadowBlurOuter1"></feComposite>
+            <feColorMatrix values="0 0 0 0 0.941176471   0 0 0 0 0.949019608   0 0 0 0 0.992156863  0 0 0 1 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="Landing" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="dialogo_4" transform="translate(0.000000, 1.000000)">
+            <g id="Bubble_left" transform="translate(18.000000, 92.000000)">
+                <g id="Bubble_izq">
+                    <g id="CTA_Primary-Copy">
+                        <g id="Group-5">
+                            <g id="Combined-Shape">
+                                <use fill="black" fill-opacity="1" filter="url(#filter-2)" xlink:href="#path-1"></use>
+                                <use stroke="#F0F2FD" stroke-width="1" fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-1"></use>
+                            </g>
+                            <text id="Quisiera-vender-onli" font-family="Raleway-Regular, Raleway" font-size="11" font-weight="normal" letter-spacing="0.332377941" fill="#92949E">
+                                <tspan x="20" y="30">¡Qué ilusión poder mejorar mi </tspan>
+                                <tspan x="20" y="43">negocio de toda la vida!</tspan>
+                            </text>
+                        </g>
+                    </g>
+                </g>
+            </g>
+            <g id="green_square" transform="translate(0.000000, 112.000000)">
+                <g id="Group-20-Copy" transform="translate(-5.528846, 0.476190)">
+                    <path d="M6.34716146,18.3073112 L6.43080827,5.91831233 L18.2115819,2.76223489e-13 L29.9223607,5.91831233 L29.8387138,18.3073112 L18.0579403,24.2256236 L6.34716146,18.3073112 Z" id="Combined-Shape" fill="#1CD6BF"></path>
+                    <polygon id="Rectangle" fill="#1DE0C8" transform="translate(12.233670, 15.082672) rotate(-45.000000) translate(-12.233670, -15.082672) " points="14.6106082 4.49924856 5.79111588 13.2004465 9.88700819 25.6660964 18.6762236 17.0941629"></polygon>
+                    <polygon id="Rectangle" fill="#0BCDB5" transform="translate(24.035852, 15.117670) rotate(-45.000000) translate(-24.035852, -15.117670) " points="13.3685343 17.3309435 25.883678 21.4763296 34.7031704 12.7751317 22.1577498 8.75901008"></polygon>
+                </g>
+            </g>
+            <g id="Bubble_right" transform="translate(57.000000, 0.000000)">
+                <g id="Bubble_izq-Copy">
+                    <g id="CTA_Primary-Copy">
+                        <g id="Group-5">
+                            <g id="Combined-Shape">
+                                <use fill="black" fill-opacity="1" filter="url(#filter-4)" xlink:href="#path-3"></use>
+                                <use stroke="#F0F2FD" stroke-width="1" fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-3"></use>
+                            </g>
+                            <text id="Me-gustaría-ayudar-p" font-family="Raleway-Regular, Raleway" font-size="11" font-weight="normal" letter-spacing="0.332377941" fill="#92949E">
+                                <tspan x="20" y="30">¡Puedo ayudarte! Esto pasará y </tspan>
+                                <tspan x="20" y="43">estaremos mejor proparados.</tspan>
+                            </text>
+                        </g>
+                    </g>
+                </g>
+            </g>
+            <g id="yellow_square" transform="translate(275.000000, 32.000000)">
+                <g id="Group-20" transform="translate(-4.865385, 0.419048)">
+                    <path d="M5.58550209,16.1104339 L5.65911128,5.20811485 L16.026192,2.34479103e-13 L26.3316774,5.20811485 L26.2580682,16.1104339 L15.8909874,21.3185487 L5.58550209,16.1104339 Z" id="Combined-Shape" fill="#FFD24F"></path>
+                    <polygon id="Rectangle" fill="#FBD874" transform="translate(10.765629, 13.272752) rotate(-45.000000) translate(-10.765629, -13.272752) " points="12.8573352 3.95933873 5.09618197 11.6163929 8.70056721 22.5861648 16.4350768 15.0428634"></polygon>
+                    <polygon id="Rectangle" fill="#F6C73E" transform="translate(21.151550, 13.303549) rotate(-45.000000) translate(-21.151550, -13.303549) " points="11.7643102 15.2512303 22.7776366 18.8991701 30.5387899 11.2421159 19.4988198 7.70792887"></polygon>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
