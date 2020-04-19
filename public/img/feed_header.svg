@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1024px" height="200px" viewBox="0 0 1024 200" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 64 (93537) - https://sketch.com -->
+    <title>feed_header</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="50%" y1="0%" x2="50%" y2="33.7837838%" id="linearGradient-1">
+            <stop stop-color="#F0F2FD" offset="0%"></stop>
+            <stop stop-color="#F0F2FD" offset="100%"></stop>
+        </linearGradient>
+        <rect id="path-2" x="0" y="0" width="1024" height="200"></rect>
+    </defs>
+    <g id="Landing" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="feed_header">
+            <g id="background">
+                <mask id="mask-3" fill="white">
+                    <use xlink:href="#path-2"></use>
+                </mask>
+                <use id="Rectangle" fill="url(#linearGradient-1)" xlink:href="#path-2"></use>
+                <line x1="892.375" y1="70" x2="892" y2="-210" id="Line-3-Copy-2" stroke="#FFFFFF" stroke-linecap="square" mask="url(#mask-3)"></line>
+                <line x1="778.706267" y1="175" x2="778.572751" y2="-136" id="Line-3-Copy-3" stroke="#FFFFFF" stroke-linecap="square" mask="url(#mask-3)"></line>
+                <line x1="821.5" y1="151.5" x2="821.066758" y2="-136" id="Line-3-Copy-10" stroke="#FFFFFF" stroke-linecap="square" mask="url(#mask-3)"></line>
+                <line x1="673.5" y1="76.5" x2="673.171875" y2="-92" id="Line-3-Copy-4" stroke="#FFFFFF" stroke-linecap="square" mask="url(#mask-3)"></line>
+                <line x1="18.5" y1="138.5" x2="18.171875" y2="-92" id="Line-3-Copy-9" stroke="#FFFFFF" stroke-linecap="square" mask="url(#mask-3)"></line>
+                <line x1="962.328125" y1="109" x2="962" y2="-136" id="Line-3-Copy-5" stroke="#FFFFFF" stroke-linecap="square" mask="url(#mask-3)"></line>
+                <g id="green_square" mask="url(#mask-3)">
+                    <g transform="translate(770.455026, 170.000000)" id="Group-20-Copy">
+                        <g transform="translate(-3.779508, 0.323810)">
+                            <path d="M4.33890614,12.4489716 L4.39608692,4.02445239 L12.4493988,1.83852933e-13 L20.4548624,4.02445239 L20.3976816,12.4489716 L12.3443697,16.473424 L4.33890614,12.4489716 Z" id="Combined-Shape" fill="#1CD6BF"></path>
+                            <polygon id="Rectangle" fill="#1DE0C8" transform="translate(8.363012, 10.256154) rotate(-45.000000) translate(-8.363012, -10.256154) " points="9.96445113 3.04463584 3.96698352 8.96123761 6.78198355 17.4676728 12.7590409 11.6391489"></polygon>
+                            <polygon id="Rectangle" fill="#0BCDB5" transform="translate(16.430756, 10.280078) rotate(-45.000000) translate(-16.430756, -10.280078) " points="9.16188801 11.7699234 17.702157 14.6187573 23.6996246 8.70215555 15.1389454 5.94139959"></polygon>
+                        </g>
+                    </g>
+                </g>
+                <g id="yellow_square" mask="url(#mask-3)">
+                    <g transform="translate(953.000000, 105.000000)" id="Group-20">
+                        <g transform="translate(-3.980769, 0.342857)">
+                            <path d="M4.56995625,13.1812641 L4.63018195,4.26118488 L13.1123389,1.87405647e-13 L21.5440997,4.26118488 L21.483874,13.1812641 L13.001717,17.442449 L4.56995625,13.1812641 Z" id="Combined-Shape" fill="#FFD24F"></path>
+                            <polygon id="Rectangle" fill="#FBD874" transform="translate(8.808242, 10.859524) rotate(-45.000000) translate(-8.808242, -10.859524) " points="10.5196379 3.23945896 4.16960343 9.50432146 7.1186459 18.4795894 13.446881 12.3077973"></polygon>
+                            <polygon id="Rectangle" fill="#F6C73E" transform="translate(17.305814, 10.884722) rotate(-45.000000) translate(-17.305814, -10.884722) " points="9.62534472 12.4782793 18.6362482 15.4629573 24.9862827 9.19809483 15.9535799 6.30648726"></polygon>
+                        </g>
+                    </g>
+                </g>
+                <g id="blue_square" mask="url(#mask-3)">
+                    <g transform="translate(886.000000, 63.000000)" id="Group-20-Copy-3">
+                        <g transform="translate(-2.653846, 0.247619)">
+                            <path d="M3.0466375,9.51980184 L3.08678797,3.07752241 L8.74155929,1.41220369e-13 L14.3627331,3.07752241 L14.3225826,9.51980184 L8.66781132,12.5973243 L3.0466375,9.51980184 Z" id="Combined-Shape" fill="#3B65E6"></path>
+                            <polygon id="Rectangle" fill="#4D75F1" transform="translate(5.871033, 7.843690) rotate(-45.000000) translate(-5.871033, -7.843690) " points="7.27246372 2.50474167 2.68869358 7.03173048 4.48732674 13.1826376 9.05337314 8.72088655"></polygon>
+                            <polygon id="Rectangle" fill="#325DE1" transform="translate(11.538337, 7.860488) rotate(-45.000000) translate(-11.538337, -7.860488) " points="6.15912013 9.18016879 12.3337842 11.002559 16.9175544 6.47557017 10.7251665 4.71841777"></polygon>
+                        </g>
+                    </g>
+                </g>
+                <g id="red_square" mask="url(#mask-3)">
+                    <g transform="translate(815.000000, 145.000000)" id="Group-20-Copy-5">
+                        <g transform="translate(-2.653846, 0.247619)">
+                            <path d="M3.0466375,9.51980184 L3.08678797,3.07752241 L8.74155929,1.38111744e-13 L14.3627331,3.07752241 L14.3225826,9.51980184 L8.66781132,12.5973243 L3.0466375,9.51980184 Z" id="Combined-Shape" fill="#FF7B7A"></path>
+                            <polygon id="Rectangle" fill="#FB8887" transform="translate(5.871033, 7.843690) rotate(-45.000000) translate(-5.871033, -7.843690) " points="7.27246372 2.50474167 2.68869358 7.03173048 4.48732674 13.1826376 9.05337314 8.72088655"></polygon>
+                            <polygon id="Rectangle" fill="#F06766" transform="translate(11.538337, 7.860488) rotate(-45.000000) translate(-11.538337, -7.860488) " points="6.15912013 9.18016879 12.3337842 11.002559 16.9175544 6.47557017 10.7251665 4.71841777"></polygon>
+                        </g>
+                    </g>
+                </g>
+                <g id="orange_square" mask="url(#mask-3)">
+                    <g transform="translate(666.000000, 70.000000)" id="Group-20-Copy-2">
+                        <g transform="translate(-2.875000, 0.247619)">
+                            <path d="M3.30052396,9.51980184 L3.3440203,3.07752241 L9.47002257,1.42552636e-13 L15.5596275,3.07752241 L15.5161312,9.51980184 L9.39012893,12.5973243 L3.30052396,9.51980184 Z" id="Combined-Shape" fill="#FFA737"></path>
+                            <polygon id="Rectangle" fill="#FCAF4C" transform="translate(6.361508, 7.842990) rotate(-45.000000) translate(-6.361508, -7.842990) " points="7.59751628 2.33960925 3.01138026 6.86423216 5.14124426 13.3463701 9.7116363 8.88896472"></polygon>
+                            <polygon id="Rectangle" fill="#FB9C24" transform="translate(12.498643, 7.861188) rotate(-45.000000) translate(-12.498643, -7.861188) " points="6.95163785 9.01209062 13.4595126 11.1676914 18.0456486 6.64306849 11.5220299 4.55468524"></polygon>
+                        </g>
+                    </g>
+                </g>
+                <g id="orange_square" mask="url(#mask-3)">
+                    <g transform="translate(12.000000, 132.000000)" id="Group-20-Copy-2">
+                        <g transform="translate(-2.875000, 0.247619)">
+                            <path d="M3.30052396,9.51980184 L3.3440203,3.07752241 L9.47002257,1.42552636e-13 L15.5596275,3.07752241 L15.5161312,9.51980184 L9.39012893,12.5973243 L3.30052396,9.51980184 Z" id="Combined-Shape" fill="#FFA737"></path>
+                            <polygon id="Rectangle" fill="#FCAF4C" transform="translate(6.361508, 7.842990) rotate(-45.000000) translate(-6.361508, -7.842990) " points="7.59751628 2.33960925 3.01138026 6.86423216 5.14124426 13.3463701 9.7116363 8.88896472"></polygon>
+                            <polygon id="Rectangle" fill="#FB9C24" transform="translate(12.498643, 7.861188) rotate(-45.000000) translate(-12.498643, -7.861188) " points="6.95163785 9.01209062 13.4595126 11.1676914 18.0456486 6.64306849 11.5220299 4.55468524"></polygon>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
