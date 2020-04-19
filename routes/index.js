@@ -29,6 +29,7 @@ router.get('/proyectos', function (req, res, next) {
     dbo
       .collection('negocios')
       .find(query)
+      .sort({'_id': -1})
       .toArray(function (err, result) {
         if (err) throw err;
         encuestas = result.map((i) => ({ ...i }));
@@ -37,9 +38,7 @@ router.get('/proyectos', function (req, res, next) {
         console.log('despues de cerrar DB');
         res.render('proyectos', {
           title: 'Proyectos',
-          data: encuestas.sort(function(a,b){
-            a.form_response.landed_at>b.form_response.landed_at
-          }),
+          data: encuestas,
         });
       });
   }); // array : array
