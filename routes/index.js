@@ -21,31 +21,19 @@ router.get('/proyectos', function (req, res, next) {
 
     var query = {};
     dbo
-      .collection('test')
+      .collection('negocios')
       .find(query)
       .toArray(function (err, result) {
         if (err) throw err;
-
-        for (var i = 0; i < 10; i++) {
-          console.log(
-            '-----' + result[0].form_response.definition.fields[i].title
-          );
-          if (result[0].form_response.answers[i].choice != undefined)
-            console.log(result[0].form_response.answers[i].choice.label);
-          if (result[0].form_response.answers[i].email != undefined)
-            console.log(result[0].form_response.answers[i].email);
-          if (result[0].form_response.answers[i].boolean != undefined)
-            console.log(result[0].form_response.answers[i].boolean);
-          if (result[0].form_response.answers[i].text != undefined)
-            console.log(result[0].form_response.answers[i].text);
-        }
         encuestas = result.map((i) => ({ ...i }));
         db.close();
         console.log(encuestas);
         console.log('despues de cerrar DB');
         res.render('proyectos', {
           title: 'Proyectos',
-          data: encuestas,
+          data: encuestas.sort(function(a,b){
+            a.form_response.landed_at>b.form_response.landed_at
+          }),
         });
       });
   }); // array : array
