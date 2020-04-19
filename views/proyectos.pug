@@ -1,35 +1,114 @@
-extends layout
-
-block content
-
-  nav.navbar.navbar-expand-md.navbar-dark.bg-dark.mb-4
-    a.navbar-brand(href='#') Mi Proyecto
-    button.navbar-toggler(type='button' data-toggle='collapse' data-target='#navbarCollapse' aria-controls='navbarCollapse' aria-expanded='false' aria-label='Toggle navigation')
-      span.navbar-toggler-icon
-    #navbarCollapse.collapse.navbar-collapse
-      ul.navbar-nav.mr-auto
-        li.nav-item
-          a.nav-link(href='/') Home
-        li.nav-item.active
-          a.nav-link(href='proyectos')
-            | Proyectos 
-            span.sr-only (current)
-        li.nav-item
-          a.nav-link(href='voluntarios') Voluntarios
-  main.container(role='main')
-    .jumbotron
-      h1 Proyectos
-      p.lead
-        | Estás en la página #{title}. Aquí irá un feed con los proyectos.
-      ul
-        each encuesta in data
-          li= encuesta.form_response.answers[1].choice.label
-        else
-          li There are no values
-    .container
-
-  footer
-  .container
-    div(align='center')
-      | Desarrollado por Nuria, Erika, Adri, Rafa y Jesús :)
-
+doctype html
+head
+  meta(charset='utf-8')
+  meta(name='viewport' content='width=device-width, initial-scale=1, shrink-to-fit=no')
+  title Conecta a quienes tienen un negocio con voluntarios que los ayudan a crecer
+  link(rel='stylesheet' href='stylesheets/feed_style.css')
+  script(src='js/script.js')
+  link(href='https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600;700;800;900&display=swap' rel='stylesheet')
+  meta(property='og:title' content='ToDo - Nombre proyecto voluntario')
+  meta(name='description' content='Te conectamos con quienes quieren verte crecer')
+  meta(property='og:image' content='ToDo')
+// nav_bar
+nav.nav_bar
+  .nav_left
+    .nav_logo
+      a(href='https://www.conecta-digital.com/feed_negocios')
+        img(src='img/nav_logo.svg')
+  .nav_right
+    ul
+      li
+        a(style='background-color: #0BCDB5;' href='https://preparados.typeform.com/to/a6SYuS') ABRIR MI CASO
+// main
+.header
+  .header_main
+    .main_left
+      h3 Elige un caso para comenzar
+      p
+        | Estos son los casos abiertos que esperan por ti para ser resueltos.
+    div(style='clear:both;')
+// main
+.feed
+  // Inicio Caso
+  .caso_feed
+    .info_formulario
+      h5
+        // Pregunta 1 - ¿Cuál es tu nombre? - texto Libre
+        span#nombre_persona Juan Rodriguez
+        |  -
+        // Pregunta 2 - ¿Y el nombre de tu negocio? - texto Libre
+        span#nombre_negocio Cervecer&iacute;a Barcelo
+      h6
+        //
+          Pregunta 3 - ¿De qué es el negocio? - SingleChoice:
+          · Restauración (bares, restaurantes, cafeterías, etc.)
+          · Salud (cuidado personal y deporte, fisioterapia, nutrición, dentista, etc.)
+          · Comercio minorista (venta de alimentos, ropa, electrónica, etc.)
+          · Educación
+          · Otro
+        span#sector Restauraci&oacute;n (bares, restaurantes, cafeter&iacute;as, etc.)
+        | ,
+        // Pregunta 4 - ¿Dónde está tu negocio? - SingleChoice (listado de provincias)
+        span#provincia Barcelona
+      p
+        // Pregunta 5 - ¿Puedes hacer una breve descripción del funcionamiento y la situación de tu negocio? - Texto libre
+        span#descripcion_actividad
+          | Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam
+      p
+        //
+          Pregunta 7 - ¿Crees que alguna de estas iniciativas podría ayudarte a asegurar la continuidad de tu negocio? - SingleChoice:
+          · Crear una web
+          · Añadir la posibilidad de vender online
+          · Hacer marketing online
+          · Hacer reparto a domicilio
+          · Entender mejor mis números para adaptarme a mis clientes
+          · Mejorar mi imagen de marca
+          · No sé qué podría hacer para asegurar la viabilidad
+        span#descripcion_necesidad Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+      .feed_calltoaction
+        p
+          | Si crees que puedes ayudar a resolver el caso, &iexcl;t&oacute;malo!
+      .feed_button
+        a(href='https://preparados.typeform.com/to/a6SYuS')
+          .button_third
+            span TOMAR CASO
+      div(style='clear:both;')
+  // Fin Caso
+  // Footer
+  .footer
+    .footer_1
+      .footer_left
+        h3 &iquest;Nos ayudas a conocerte?
+        p
+          | Intentaremos que nuestra comunidad crezca y as&iacute; hay m&aacute;s voluntarios que est&eacute;n dispuestos a asesorarte. 
+          br
+          br
+          | &iexcl;&Aacute;nimo! &iexcl;Ahora las cosas solo pueden mejorar!
+        .footer_button
+          a(href='https://preparados.typeform.com/to/a6SYuS')
+            .button_principal(style='box-shadow: 10px 10px 20px #0D0D0E;')
+              span IR A LA ENCUESTA
+      .footer_right
+        img(src='img/footer_logo.svg')
+      div(style='clear:both;')
+    .footer_2
+      .footer_left
+        h3(style='margin: 20px 0;') S&iacute;guenos y comparte
+        .social
+          a(href='https://twitter.com/conecta_esp')
+            img(src='img/twitter.svg')
+          a(href='https://www.instagram.com/conectadigital_es')
+            img(src='img/instagram.svg')
+          a(href='https://www.facebook.com/ConectaDigitalEsp/')
+            img(src='img/facebook.svg')
+        p
+          | Si tienes dudas o quieres saludarnos, nos puedes escribir a 
+          a(href='ToDo emailContacto') hola@conecta-digital.com
+      div(style='clear:both;')
+    .footer_1
+      .footer_left
+        h3(style='font-size: 1.8em;') Gracias por apoyar proyectos solidarios como este
+      .negocios_right
+        img(style='width: 40%; float: left;padding: initial;' src='img/typeform_logo.svg')
+        img(style='width: 40%; float: right;padding: initial;' src='img/godaddy_logo.svg')
+      div(style='clear:both;')

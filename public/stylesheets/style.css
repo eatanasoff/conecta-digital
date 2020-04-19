@@ -239,7 +239,7 @@ li a{
 	background-color: #F0F2FD;
 	background-image: url("../img/bg_section1.svg");
   	background-repeat: no-repeat;
-  	background-size: contain;
+  	background-size: cover;
 }  
 
 .section1_main{
@@ -292,6 +292,7 @@ li a{
 
 .negocios_right img{
 	width: 100%;
+	padding-top: 60px;
 	
 }
 
@@ -390,8 +391,14 @@ h1{
  
 }
 
+/*navbar*/
+nav {
+	display: none;
+}
 
-	/*header*/
+
+
+/*header*/
 
 .header {
 	width: 100%;
@@ -558,7 +565,7 @@ h1{
 }
 
 
-/*voluntarios*/
+/*footer*/
 .footer {
 	width: 100%;
 	padding: 80px 0;

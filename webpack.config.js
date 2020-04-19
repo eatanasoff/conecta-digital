@@ -38,6 +38,10 @@ module.exports = {
         template: 'views/contacto.pug',
         filename: 'contacto.html'
       })
+      new HtmlWebpackPlugin({
+        template: 'views/ajax.pug',
+        filename: 'ajax.html'
+      })
     ],
     mode: 'production',
     output: {

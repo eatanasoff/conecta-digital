@@ -58,6 +58,11 @@ router.get('/voluntarios', function (req, res, next) {
   res.render('voluntarios', { title: 'Voluntarios' });
 });
 
+/* Servicios. */
+router.get('/ajax', function (req, res, next) {
+  res.render('ajax', { title: 'Voluntarios' });
+});
+
 /* typeformwebhook */
 router.post('/addresponse', function (req, res, next) {
   var ok = {
