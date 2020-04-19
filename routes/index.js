@@ -42,6 +42,32 @@ router.get('/proyectos', function (req, res, next) {
  */
 
 /* Servicios. */
+router.get('/proyecto/:id', function (req, res, next) {
+    console.log("Entrando a proyecto")
+    var id = req.params.id
+    console.log("Id consultado: "+id)
+    MongoClient.connect(url, function (err, db) {
+    if (err) throw err;
+    var dbo = db.db('conecta');
+
+    var query = "_id:ObjectId("+id+")";
+    dbo
+      .collection('negocios')
+      .find(query)
+      .toArray(function (err, result) {
+        if (err) throw err;
+        var proyecto = result.map((i) => ({ ...i }))[0];
+        db.close();
+        console.log(proyecto);
+        console.log('despues de cerrar DB');
+        res.render('proyecto', {
+          data: proyecto
+        });
+      });
+  }); // array : array
+});
+
+/* Servicios. */
 router.get('/voluntarios', function (req, res, next) {
   res.render('voluntarios', { title: 'Voluntarios' });
 });

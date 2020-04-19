@@ -42,6 +42,10 @@ module.exports = {
         template: 'views/ajax.pug',
         filename: 'ajax.html'
       })
+      new HtmlWebpackPlugin({
+        template: 'views/proyecto.pug',
+        filename: 'proyecto.html'
+      })
     ],
     mode: 'production',
     output: {

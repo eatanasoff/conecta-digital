@@ -3,8 +3,7 @@ head
   meta(charset='utf-8')
   meta(name='viewport' content='width=device-width, initial-scale=1, shrink-to-fit=no')
   title Conecta a quienes tienen un negocio con voluntarios que los ayudan a crecer
-  link(rel='stylesheet' href='stylesheets/feed_style.css')
-  script(src='js/script.js')
+  link(rel='stylesheet' href='css/feed_style.css')
   link(href='https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600;700;800;900&display=swap' rel='stylesheet')
   meta(property='og:title' content='ToDo - Nombre proyecto voluntario')
   meta(name='description' content='Te conectamos con quienes quieren verte crecer')
@@ -13,7 +12,7 @@ head
 nav.nav_bar
   .nav_left
     .nav_logo
-      a(href='https://www.conecta-digital.com/feed_negocios')
+      a(href='index')
         img(src='img/nav_logo.svg')
   .nav_right
     ul
@@ -24,21 +23,21 @@ nav.nav_bar
   .header_main
     .main_left
       h3 Elige un caso para comenzar
-      p
-        | Estos son los casos abiertos que esperan por ti para ser resueltos.
+      p Estos son los casos abiertos que esperan por ti para ser resueltos.
     div(style='clear:both;')
 // main
 .feed
   each encuesta in data
+    - var url = encuesta._id
     // Inicio Caso
     .caso_feed
       .info_formulario
         h5
           // Pregunta 1 - ¿Cuál es tu nombre? - texto Libre
           span#nombre_persona #{encuesta.form_response.answers[0].text}
-          |  - 
+          |  -
           // Pregunta 2 - ¿Y el nombre de tu negocio? - texto Libre
-          span#nombre_negocio #{encuesta.form_response.answers[1].text}
+          span#nombre_negocio  #{encuesta.form_response.answers[1].text}
         h6
           //
             Pregunta 3 - ¿De qué es el negocio? - SingleChoice:
@@ -47,14 +46,17 @@ nav.nav_bar
             · Comercio minorista (venta de alimentos, ropa, electrónica, etc.)
             · Educación
             · Otro
-          span#sector #{encuesta.form_response.answers[2].choice.label}
+          if encuesta.form_response.answers[2].choice.label
+            span#sector #{encuesta.form_response.answers[2].choice.label}
+          else
+            span#sector #{encuesta.form_response.answers[2].choice.other}
           | ,
           // Pregunta 4 - ¿Dónde está tu negocio? - SingleChoice (listado de provincias)
-          span#provincia  #{encuesta.form_response.answers[4].choice.label}
+          span#provincia  #{encuesta.form_response.answers[3].choice.label}
         p
           // Pregunta 5 - ¿Puedes hacer una breve descripción del funcionamiento y la situación de tu negocio? - Texto libre
           span#descripcion_actividad
-            | #{encuesta.form_response.answers[5].text}
+            | #{encuesta.form_response.answers[4].text}
         p
           //
             Pregunta 7 - ¿Crees que alguna de estas iniciativas podría ayudarte a asegurar la continuidad de tu negocio? - SingleChoice:
@@ -65,23 +67,23 @@ nav.nav_bar
             · Entender mejor mis números para adaptarme a mis clientes
             · Mejorar mi imagen de marca
             · No sé qué podría hacer para asegurar la viabilidad
-          span#descripcion_necesidad #{encuesta.form_response.answers[7].choice.label}
+          span#descripcion_necesidad #{encuesta.form_response.answers[6].choice.label}
         .feed_calltoaction
           p
             | Si crees que puedes ayudar a resolver el caso, &iexcl;t&oacute;malo!
         .feed_button
-          a(href='https://preparados.typeform.com/to/a6SYuS')
+          a(href='proyecto/'+url)
             .button_third
               span TOMAR CASO
         div(style='clear:both;')
-  // Fin Caso
+    // Fin Caso
   // Footer
   .footer
     .footer_1
       .footer_left
         h3 &iquest;Nos ayudas a conocerte?
         p
-          | Intentaremos que nuestra comunidad crezca y as&iacute; hay m&aacute;s voluntarios que est&eacute;n dispuestos a asesorarte.
+          | Intentaremos que nuestra comunidad crezca y as&iacute; hay m&aacute;s voluntarios que est&eacute;n dispuestos a asesorarte. 
           br
           br
           | &iexcl;&Aacute;nimo! &iexcl;Ahora las cosas solo pueden mejorar!
@@ -103,7 +105,7 @@ nav.nav_bar
           a(href='https://www.facebook.com/ConectaDigitalEsp/')
             img(src='img/facebook.svg')
         p
-          | Si tienes dudas o quieres saludarnos, nos puedes escribir a
+          | Si tienes dudas o quieres saludarnos, nos puedes escribir a 
           a(href='ToDo emailContacto') hola@conecta-digital.com
       div(style='clear:both;')
     .footer_1

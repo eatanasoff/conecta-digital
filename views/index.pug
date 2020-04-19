@@ -1,35 +1,39 @@
 doctype html
 head
   meta(charset='utf-8')
-  meta(name='viewport' content='width=device-width, initial-scale=1, shrink-to-fit=no')
-  title Conecta a quienes tienen un negocio con voluntarios que los ayudan a crecer
-  link(rel='stylesheet' href='stylesheets/style.css')
+  meta(name='viewport' content='width=device-width, initial-scale=1,\
+  shrink-to-fit=no')
+  title
+    | Conecta a quienes tienen un negocio con voluntarios que los ayudan a
+    | crecer
+  link(rel='stylesheet' href='css/style.css')
   script(src='js/script.js')
   link(href='https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600;700;800;900&display=swap' rel='stylesheet')
   meta(property='og:title' content='Conecta Digital España')
-  meta(name='description' content='Te conectamos con quienes quieren verte crecer')
+  meta(name='description' content='Te conectamos con quienes quieren verte\
+  crecer')
   meta(property='img/nav_logo.svg' content='ToDo')
 // nav_bar
-nav.nav_bar
+nav.nav_bar.hidden
   .nav_left
     .nav_logo
-      a(href='https://www.conecta-digital.com')
+      a(href='index.html')
         img(src='img/nav_logo.svg')
   .nav_right
     ul
       li
-        a(style='background-color: #0BCDB5;' href='https://preparados.typeform.com/to/a6SYuS') Tengo un negocio
-      li
-        a(style='background-color: #FFD24F;' href='#') Ver casos
+        a(style='background-color: #0BCDB5;' href='https://preparados.typeform.com/to/a6SYuS') TENGO UN NEGOCIO
+      li#nav_casos
+        a(style='background-color: #FFD24F;' href='proyectos') VER CASOS
 // main
 .header
   .header_main
-    .main_right_mov
-      img(src='img/imagotivo_conecta.svg')
     .main_left
       h1 Te conectamos con quienes quieren verte crecer
       h2
-        | Si tu actividad se vio afectada total o parcialmente por el COVID-19 y tienes una idea de c&oacute;mo reactivarte, conoce a los voluntarios que te quieren ayudar.
+        | Si tu actividad se vio afectada total o parcialmente por el COVID-19 y
+        | tienes una idea de c&oacute;mo reactivarte, conoce a los voluntarios que te
+        | quieren ayudar.
       .main_buttons
         .main_button_left
           a(href='https://preparados.typeform.com/to/a6SYuS')
@@ -43,12 +47,14 @@ nav.nav_bar
       img(src='img/composicion_logo.svg')
     div(style='clear:both;')
 // section1
-.section1
+#section1.section1
   .section1_main
     .section1_left
       h3 Conecta
       p
-        | Crea una web o una tienda online para ampliar tu negocio, renueva la imagen de tu marca y mejora tus t&eacute;cnicas de ventas. Si no lo tienes claro, planifica el crecimiento de tu negocio y digitaliza tu actividad.
+        | Crea una web o una tienda online para ampliar tu negocio, renueva la
+        | imagen de tu marca y mejora tus t&eacute;cnicas de ventas. Si no lo tienes claro,
+        | planifica el crecimiento de tu negocio y digitaliza tu actividad.
       .main_button_left
         a(href='https://preparados.typeform.com/to/a6SYuS')
           .button_principal
@@ -73,7 +79,8 @@ nav.nav_bar
     .negocios_left
       h3 Todo 100% gratis para siempre
       p
-        | No cobramos comisiones ni suscripci&oacute;n. Queremos crear una comunidad que se ayuda mutuamente sin esperar una retribuci&oacute;n econ&oacute;mica.
+        | No cobramos comisiones ni suscripci&oacute;n. Queremos crear una comunidad que
+        | se ayuda mutuamente sin esperar una retribuci&oacute;n econ&oacute;mica.
       .negocios_button
         a(href='https://preparados.typeform.com/to/a6SYuS')
           .button_principal
@@ -85,7 +92,9 @@ nav.nav_bar
     .negocios_left
       h3 Abre tu caso para conocerte
       p
-        | Crea un caso contando a qu&eacute; te dedicas y c&oacute;mo cre&eacute;s que podr&iacute;as mejorar tu negocio. Si no lo tienes claro, cuenta tu situaci&oacute;n. Los voluntarios intentar&aacute;n asesorarte de la mejor manera posible.
+        | Crea un caso contando a qu&eacute; te dedicas y c&oacute;mo cre&eacute;s que podr&iacute;as mejorar
+        | tu negocio. Si no lo tienes claro, cuenta tu situaci&oacute;n. Los voluntarios
+        | intentar&aacute;n asesorarte de la mejor manera posible.
       .negocios_button
         a(href='https://preparados.typeform.com/to/a6SYuS')
           .button_principal
@@ -97,10 +106,12 @@ nav.nav_bar
     .negocios_left
       h3 Encontraremos el perfil indicado
       p
-        | Intentaremos que nuestra comunidad crezca y as&iacute; hay m&aacute;s voluntarios que est&eacute;n dispuestos a asesorarte. 
+        | Intentaremos que nuestra comunidad crezca y as&iacute; hay m&aacute;s voluntarios que
+        | est&eacute;n dispuestos a asesorarte. 
         br
         br
-        | &iexcl;&Aacute;nimo! &iexcl;Ahora las cosas solo pueden mejorar!
+        | &iexcl;&Aacute;nimo! &iexcl;Ahora las cosas solo
+        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;pueden mejorar!
       .negocios_button
         a(href='https://preparados.typeform.com/to/a6SYuS')
           .button_principal
@@ -112,13 +123,16 @@ nav.nav_bar
     .negocios_left
       h3 Ayudar es todo ganancia
       p
-        | Si tienes conocimientos espec&iacute;ficos o simplemente te gusta la tecnolog&iacute;a, &uacute;nete y suma experiencia asesorando a quienes lo necesitan. Ya ver&aacute;s lo bien que se siente ayudar a otras personas.
+        | Si tienes conocimientos espec&iacute;ficos o simplemente te gusta la
+        | tecnolog&iacute;a, &uacute;nete y suma experiencia asesorando a quienes lo necesitan. Ya
+        | ver&aacute;s lo bien que se siente ayudar a otras personas.
       .negocios_button
         a(href='https://preparados.typeform.com/to/mnC1wG')
           .button_secondary
             span QUIERO AYUDAR
       p(style='padding-top: 100px;')
-        | Si quieres comenzar ya mismo, estos son los casos abiertos en los que puedes colaborar.
+        | Si quieres comenzar ya mismo, estos son los
+        | casos abiertos en los que puedes colaborar.
       .negocios_button
         a(href='https://preparados.typeform.com/to/mnC1wG')
           .button_secondary
@@ -132,10 +146,12 @@ nav.nav_bar
     .footer_left
       h3 &iquest;Nos ayudas a conocerte?
       p
-        | Intentaremos que nuestra comunidad crezca y as&iacute; hay m&aacute;s voluntarios que est&eacute;n dispuestos a asesorarte. 
+        | Intentaremos que nuestra comunidad crezca y as&iacute; hay m&aacute;s voluntarios que
+        | est&eacute;n dispuestos a asesorarte. 
         br
         br
-        | &iexcl;&Aacute;nimo! &iexcl;Ahora las cosas solo pueden mejorar!
+        | &iexcl;&Aacute;nimo! &iexcl;Ahora las cosas solo
+        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;pueden mejorar!
       .footer_button
         a(href='https://preparados.typeform.com/to/a6SYuS')
           .button_principal(style='box-shadow: 10px 10px 20px #0D0D0E;')
@@ -159,8 +175,14 @@ nav.nav_bar
     div(style='clear:both;')
   .footer_1
     .footer_left
-      h3(style='font-size: 1.8em;') Gracias por apoyar proyectos solidarios como este
+      h3(style='font-size: 1.8em;')
+        | Gracias por apoyar proyectos solidarios como
+        | este
     .negocios_right
       img(style='width: 40%; margin-top: 30px;float: left;padding: initial;' src='img/typeform_logo.svg')
-      img(style='width: 40%; margin-top: 30px; float: right;padding: initial;' src='img/godaddy_logo.svg')
+      img(style='width: 40%; margin-top: 30px;\
+      float: right;padding: initial;' src='img/godaddy_logo.svg')
     div(style='clear:both;')
+// <script src="lib/jquery-3.5.0.min.js"></script>
+script(src='lib/jquery-3.4.1.min.js' type='text/javascript')
+script(src='lib/main.js')
