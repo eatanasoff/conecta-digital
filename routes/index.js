@@ -4,8 +4,8 @@ const bodyParser = require('body-parser');
 router.use(bodyParser.urlencoded({ extended: false }));
 router.use(bodyParser.json());
 var MongoClient = require('mongodb').MongoClient;
-var url = 'mongodb://user:password@localhost:27017/conecta';
-
+var url = 'mongodb://'+process.env.MONGO_USER+':'+process.env.MONGO_PASS+'@'+process.env.MONGO_URL+':'+process.env.MONGO_PORT+'/conecta';
+console.log("URL definida: "+url)
 /* GET home page. */
 router.get('/', function (req, res, next) {
   console.log('Home');
@@ -60,23 +60,36 @@ router.get('/voluntarios', function (req, res, next) {
 
 /* typeformwebhook */
 router.post('/addresponse', function (req, res, next) {
-  //console.log(JSON.stringify(req.body));
-  MongoClient.connect(url, function (err, db) {
-    if (err) throw err;
-    var dbo = db.db('conecta');
-    var myobj = req.body;
-    dbo.collection('test').insertOne(myobj, function (err, res) {
-      if (err) throw err;
-      console.log('1 document inserted');
-      db.close();
-    });
-  });
-  respuesta = {
+  var ok = {
     error: false,
     codigo: 200,
     mensaje: 'Todo OK',
   };
-  res.send(respuesta);
+  var error = {
+    error: true,
+    codigo: 404,
+    mensaje: "form_not_found",
+  }
+  var collection = "other";
+  var myobj = req.body;
+
+  if (myobj.form_response) {
+    if (myobj.form_response.form_id=="mnC1wG") collection = "voluntarios"
+    else if (myobj.form_response.form_id=="a6SYuS") collection = "negocios"
+    MongoClient.connect(url, function (err, db) {
+        if (err) throw err;
+        var dbo = db.db('conecta');
+        dbo.collection(collection).insertOne(myobj, function (err, res) {
+          if (err) throw err;
+          db.close();
+        });      
+    });
+    res.send(ok)
+  }
+  else {
+    res.send(error)
+  }
+  
 });
 
 module.exports = router;
