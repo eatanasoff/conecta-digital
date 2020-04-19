@@ -4,10 +4,16 @@ const bodyParser = require('body-parser');
 router.use(bodyParser.urlencoded({ extended: false }));
 router.use(bodyParser.json());
 var MongoClient = require('mongodb').MongoClient;
+var mongo = require('mongodb')
 var url = 'mongodb://'+process.env.MONGO_USER+':'+process.env.MONGO_PASS+'@'+process.env.MONGO_URL+':'+process.env.MONGO_PORT+'/conecta';
 console.log("URL definida: "+url)
 /* GET home page. */
 router.get('/', function (req, res, next) {
+  console.log('Home');
+  res.render('index', { title: 'Home' });
+});
+
+router.get('/index', function (req, res, next) {
   console.log('Home');
   res.render('index', { title: 'Home' });
 });
@@ -44,16 +50,14 @@ router.get('/proyectos', function (req, res, next) {
 /* Servicios. */
 router.get('/proyecto/:id', function (req, res, next) {
     console.log("Entrando a proyecto")
-    var id = req.params.id
-    console.log("Id consultado: "+id)
+    var o_id = new mongo.ObjectID(req.params.id);
+    console.log("Id consultado: "+req.params.id)
     MongoClient.connect(url, function (err, db) {
     if (err) throw err;
     var dbo = db.db('conecta');
-
-    var query = "_id:ObjectId("+id+")";
     dbo
       .collection('negocios')
-      .find(query)
+      .find({'_id': o_id})
       .toArray(function (err, result) {
         if (err) throw err;
         var proyecto = result.map((i) => ({ ...i }))[0];
