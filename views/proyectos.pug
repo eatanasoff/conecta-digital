@@ -13,10 +13,10 @@ head
     function addLike(id) {
       $.post("/addlike",
       {
-      id: "5e9c969882058e5256dcb210"
+      id: id
       },
       function(data,status){
-      $( '#likeCounter' ).html( "Likes: "+data.likes );
+      $( '#likeCounter'+id ).html( "Likes: "+data.likes );
       });
     }
 
@@ -91,7 +91,7 @@ nav.nav_bar
         .feed_calltoaction
           p
             | Si crees que puedes ayudar a resolver el caso, &iexcl;t&oacute;malo! 
-          p#likeCounter
+          p(id= 'likeCounter' + url)
             | Likes: #{encuesta.likes} 
             .nav_left
               .nav_logo
