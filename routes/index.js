@@ -114,4 +114,58 @@ router.post('/addresponse', function (req, res, next) {
   
 });
 
+/* Likes */
+router.post('/addlike', function (req, finalRes, next) {
+  var ok = {
+    error: false,
+    codigo: 200,
+    mensaje: 'Todo OK',
+  };
+  var error = {
+    error: true,
+    codigo: 404,
+    mensaje: "form_not_found",
+  }
+  var collection = "other";
+  var myobj = req.body;
+  console.log(myobj)
+  var o_id = new mongo.ObjectID(myobj.id);
+  if (myobj.id) {
+    MongoClient.connect(url, function (err, db) {
+      if (err) throw err;
+      var dbo = db.db('conecta');
+      // update a record in the collection
+      dbo
+        .collection('negocios')
+        .updateOne(
+          // find record with name "MyServer"
+          {'_id': o_id},
+          // increment it's property called "ran" by 1
+          { $inc: { likes: 1 } },
+          function(err, res) {
+            if (err) throw err;
+            console.log("1 document updated");
+            dbo
+              .collection('negocios')
+              .find({'_id': o_id})
+              .toArray(function (err, result) {
+                if (err) throw err;
+                var proyecto = result.map((i) => ({ ...i }))[0];
+                db.close();
+                console.log(proyecto);
+                console.log('despues de cerrar DB');
+                ok=proyecto;
+                finalRes.send(ok)
+              });
+            db.close();
+          }
+        );
+      })
+  }
+  else {
+    finalRes.send(error)
+  }
+  
+});
+
 module.exports = router;

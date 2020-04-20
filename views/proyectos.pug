@@ -8,6 +8,18 @@ head
   meta(property='og:title' content='ToDo - Nombre proyecto voluntario')
   meta(name='description' content='Te conectamos con quienes quieren verte crecer')
   meta(property='og:image' content='ToDo')
+  script(src='https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js')
+  script.
+    function addLike(id) {
+      $.post("/addlike",
+      {
+      id: "5e9c969882058e5256dcb210"
+      },
+      function(data,status){
+      $( '#likeCounter' ).html( "Likes: "+data.likes );
+      });
+    }
+
 // nav_bar
 nav.nav_bar
   .nav_left
@@ -78,7 +90,13 @@ nav.nav_bar
           
         .feed_calltoaction
           p
-            | Si crees que puedes ayudar a resolver el caso, &iexcl;t&oacute;malo!
+            | Si crees que puedes ayudar a resolver el caso, &iexcl;t&oacute;malo! 
+          p#likeCounter
+            | Likes: #{encuesta.likes} 
+            .nav_left
+              .nav_logo
+                input(type='image' src='/img/nav_logo.svg' onclick='addLike("' + url + '")')
+
         .feed_button
           a(href='proyecto/'+url)
             .button_third
