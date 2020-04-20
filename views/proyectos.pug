@@ -52,7 +52,11 @@ nav.nav_bar
             span#sector #{encuesta.form_response.answers[2].choice.other}
           | ,
           // Pregunta 4 - ¿Dónde está tu negocio? - SingleChoice (listado de provincias)
-          span#provincia  #{encuesta.form_response.answers[3].choice.label}
+          if encuesta.form_response.answers[3].choice.label
+            span#provincia  #{encuesta.form_response.answers[3].choice.label}
+          else
+            span#provincia  #{encuesta.form_response.answers[3].choice.other}
+          
         p
           // Pregunta 5 - ¿Puedes hacer una breve descripción del funcionamiento y la situación de tu negocio? - Texto libre
           span#descripcion_actividad
@@ -67,7 +71,11 @@ nav.nav_bar
             · Entender mejor mis números para adaptarme a mis clientes
             · Mejorar mi imagen de marca
             · No sé qué podría hacer para asegurar la viabilidad
-          span#descripcion_necesidad #{encuesta.form_response.answers[6].choice.label}
+          if encuesta.form_response.answers[6].choice.label
+            span#descripcion_necesidad #{encuesta.form_response.answers[6].choice.label}
+          else
+            span#descripcion_necesidad #{encuesta.form_response.answers[6].choice.other}
+          
         .feed_calltoaction
           p
             | Si crees que puedes ayudar a resolver el caso, &iexcl;t&oacute;malo!
