@@ -125,11 +125,11 @@ nav.nav_bar
           br
           br
           button#submit_button.button_third(type='submit' disabled) HACER ESTE CASO
-
-      p(style='font-size: 0.9em;	border-top: solid 1px #F0F2FD;')
-        br
-        | Personas interesadas en resolver este caso:
-        // agregar recuento de veces que se hizo click al CTA "QUIERO HACER ESTE CASO"
+      if data.email
+        p(style='font-size: 0.9em;	border-top: solid 1px #F0F2FD;')
+          br
+          | Personas interesadas en resolver este caso: #{data.email.length}
+          // agregar recuento de veces que se hizo click al CTA "QUIERO HACER ESTE CASO"
   // Fin Caso
   p(style='margin: 20px auto 100px;text-align: center;')
     a(href='/proyectos') Volver al listado de casos
