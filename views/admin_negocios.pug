@@ -1,0 +1,45 @@
+doctype html
+head
+  title Casos recibidos
+h1 Listado de casos
+#container.col
+  table(style='border:1px solid black')
+    tr
+      th(style='border:1px solid black') &iquest;Cu&aacute;l es tu nombre?
+      th(style='border:1px solid black') &iquest;Y el nombre de tu negocio?
+      th(style='border:1px solid black') &iquest;De qu&eacute; es el negocio?
+      th(style='border:1px solid black') &iquest;D&oacute;nde est&aacute; tu negocio?
+      th(style='border:1px solid black') Descripci&oacute;n del funcionamiento y la situaci&oacute;n
+      th(style='border:1px solid black') Pon aqu&iacute; tu web, si tienes
+      th(style='border:1px solid black') Iniciativas asegurar la continuidad de tu negocio
+      th(style='border:1px solid black') Email 
+      th(style='border:1px solid black') Voluntarios
+    each encuesta in data
+        tr
+            td(style='border:1px solid black') #{encuesta.form_response.answers[0].text}
+            td(style='border:1px solid black') #{encuesta.form_response.answers[1].text}
+            td(style='border:1px solid black')
+                if encuesta.form_response.answers[2].choice.label
+                    span #{encuesta.form_response.answers[2].choice.label}
+                else
+                    span #{encuesta.form_response.answers[2].choice.other}
+            td(style='border:1px solid black')
+                if encuesta.form_response.answers[3].choice.label
+                    span  #{encuesta.form_response.answers[3].choice.label}
+                else
+                    span  #{encuesta.form_response.answers[3].choice.other}
+            td(style='border:1px solid black') #{encuesta.form_response.answers[4].text}
+            td(style='border:1px solid black') #{encuesta.form_response.answers[5].url}
+            td(style='border:1px solid black')
+                if encuesta.form_response.answers[6].choice.label
+                    span #{encuesta.form_response.answers[6].choice.label}
+                else
+                    span #{encuesta.form_response.answers[6].choice.other}
+            td(style='border:1px solid black') #{encuesta.form_response.answers[7].email}
+            td(style='border:1px solid black')
+                if encuesta.email
+                    each mail in encuesta.email
+                        | #{mail}
+                        br 
+                else
+                    | Sin voluntarios
