@@ -46,6 +46,14 @@ module.exports = {
         template: 'views/proyecto.pug',
         filename: 'proyecto.html'
       })
+      new HtmlWebpackPlugin({
+        template: 'views/faqs.pug',
+        filename: 'faqs.html'
+      })
+      new HtmlWebpackPlugin({
+        template: 'views/quienes_somos.pug',
+        filename: 'quienes_somos.html'
+      })
     ],
     mode: 'production',
     output: {

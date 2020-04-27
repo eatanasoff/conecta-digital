@@ -6,14 +6,44 @@ head
   link(rel='stylesheet' href='/css/feed_style.css')
   script(src='/js/script.js')
   link(href='https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600;700;800;900&display=swap' rel='stylesheet')
-  meta(property='og:title' content='ToDo - Nombre proyecto voluntario')
+  meta(property='og:title' content='Conecta Digital España')
   meta(name='description' content='Te conectamos con quienes quieren verte crecer')
-  meta(property='og:image' content='ToDo')
+  meta(property='og:image' content='/conecta-logo.png')
+  // /favicon
+  link(rel='apple-touch-icon' sizes='57x57' href='/favicon/apple-icon-57x57.png')
+  link(rel='apple-touch-icon' sizes='60x60' href='/favicon/apple-icon-60x60.png')
+  link(rel='apple-touch-icon' sizes='72x72' href='/favicon/apple-icon-72x72.png')
+  link(rel='apple-touch-icon' sizes='76x76' href='/favicon/apple-icon-76x76.png')
+  link(rel='apple-touch-icon' sizes='114x114' href='/favicon/apple-icon-114x114.png')
+  link(rel='apple-touch-icon' sizes='120x120' href='/favicon/apple-icon-120x120.png')
+  link(rel='apple-touch-icon' sizes='144x144' href='/favicon/apple-icon-144x144.png')
+  link(rel='apple-touch-icon' sizes='152x152' href='/favicon/apple-icon-152x152.png')
+  link(rel='apple-touch-icon' sizes='180x180' href='/favicon/apple-icon-180x180.png')
+  link(rel='icon' type='image/png' sizes='192x192' href='/favicon/android-icon-192x192.png')
+  link(rel='icon' type='image/png' sizes='32x32' href='/favicon/favicon-32x32.png')
+  link(rel='icon' type='image/png' sizes='96x96' href='/favicon/favicon-96x96.png')
+  link(rel='icon' type='image/png' sizes='16x16' href='/favicon/favicon-16x16.png')
+  link(rel='manifest' href='/favicon/manifest.json')
+  meta(name='msapplication-TileColor' content='#ffffff')
+  meta(name='msapplication-TileImage' content='/favicon/ms-icon-144x144.png')
+  meta(name='theme-color' content='#ffffff')
+
+script.
+  function terms_changed() {
+  var checkBox = document.getElementById("terms_and_conditions");
+  var text = document.getElementById("submit_button");
+  if (checkBox.checked == true){
+  text.disabled = false;
+  } else {
+  text.disabled = true;
+  }
+  }
+
 // nav_bar
 nav.nav_bar
   .nav_left
     .nav_logo
-      a(href='/')
+      a(href='index')
         img(src='/img/nav_logo.svg')
 // main
 .header
@@ -26,6 +56,7 @@ nav.nav_bar
 // main
 .feed
   // Inicio Caso
+  - var url = data._id
   .caso_feed
     .info_formulario
       h5
@@ -55,7 +86,7 @@ nav.nav_bar
           | #{data.form_response.answers[4].text}
       p
         // Pregunta 6 - Pon aquí tu web, si tienes - Acá debería completar el href para que vaya al sitio. Este campo es opcional.
-        a(href='completarconsitioweb.com')
+        a(href='#{data.form_response.answers[5].url}')
           span#descripcion_necesidad #{data.form_response.answers[5].url}
       p
         //
@@ -77,14 +108,28 @@ nav.nav_bar
           span#descripcion_necesidad #{data.form_response.answers[7].email}
       .feed_calltoaction(style='border-top: solid 1px #F0F2FD;width: 100%; float: initial;margin: auto;')
         p
-          | Si quieres ayudar en este caso, contacta a este negocio envi&aacute;ndole un email.
-      .feed_button(style='width: 100%; float: initial;margin: auto;')
-        // volver a agregar el correo
-        a(href='mailto:elcorreo@gmail.com')
-          // Este botón que haga la magia necesaria  para saber que alguien tomó el caso :)
-          .button_third
-            span QUIERO HACER ESTE CASO
-      p(style='margin: 20px auto 0;text-align: center;')
-        // Pregunta 8 - Por último, danos tu email para que cuando un voluntario quiera ayudarte pueda ponerse en contacto contigo. - Acá debería completar el href para poder escribirle. Este campo es opcional.
-        a(href='../proyectos') Volver al listado de casos
+          | Si quieres ayudar en este caso, completa el email y acepta los t&eacute;rminos y condiciones.
+        form(action='/addVoluntario')
+          label(for='email-voluntario') Dinos tu email:
+          input#email-voluntario(type='email' name='email' value='Escribe tu email aquí' onfocus="this.value=''")
+          br
+          input#terms_and_conditions(type='checkbox' value='1' onclick='terms_changed()')
+          label(for='terms_and_conditions')
+            | Acepto los 
+            a(href='/docs/termsandconditions_conecta-digital.pdf' target='_blank') t&eacute;rminos y condiciones
+            |  y la 
+            a(href='/docs/personalinfo-conecta-digital.pdf' target='_blank') pol&iacute;tica de privacidad
+            | .
+          br
+          input#prodId(name='id' type='hidden' value=url)
+          br
+          br
+          button#submit_button.button_third(type='submit' disabled) HACER ESTE CASO
+
+      p(style='font-size: 0.9em;	border-top: solid 1px #F0F2FD;')
+        br
+        | Personas interesadas en resolver este caso:
+        // agregar recuento de veces que se hizo click al CTA "QUIERO HACER ESTE CASO"
   // Fin Caso
+  p(style='margin: 20px auto 100px;text-align: center;')
+    a(href='/proyectos') Volver al listado de casos

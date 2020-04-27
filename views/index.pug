@@ -3,21 +3,37 @@ head
   meta(charset='utf-8')
   meta(name='viewport' content='width=device-width, initial-scale=1,\
   shrink-to-fit=no')
-  title
-    | Conecta a quienes tienen un negocio con voluntarios que los ayudan a
-    | crecer
+  title Conecta a quienes tienen un negocio con voluntarios que los ayudan a crecer
   link(rel='stylesheet' href='css/style.css')
   script(src='js/script.js')
   link(href='https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600;700;800;900&display=swap' rel='stylesheet')
   meta(property='og:title' content='Conecta Digital España')
   meta(name='description' content='Te conectamos con quienes quieren verte\
   crecer')
-  meta(property='img/nav_logo.svg' content='ToDo')
+  meta(property='og:image' content='conecta-logo.png')
+  // favicon
+  link(rel='apple-touch-icon' sizes='57x57' href='favicon/apple-icon-57x57.png')
+  link(rel='apple-touch-icon' sizes='60x60' href='favicon/apple-icon-60x60.png')
+  link(rel='apple-touch-icon' sizes='72x72' href='favicon/apple-icon-72x72.png')
+  link(rel='apple-touch-icon' sizes='76x76' href='favicon/apple-icon-76x76.png')
+  link(rel='apple-touch-icon' sizes='114x114' href='favicon/apple-icon-114x114.png')
+  link(rel='apple-touch-icon' sizes='120x120' href='favicon/apple-icon-120x120.png')
+  link(rel='apple-touch-icon' sizes='144x144' href='favicon/apple-icon-144x144.png')
+  link(rel='apple-touch-icon' sizes='152x152' href='favicon/apple-icon-152x152.png')
+  link(rel='apple-touch-icon' sizes='180x180' href='favicon/apple-icon-180x180.png')
+  link(rel='icon' type='image/png' sizes='192x192' href='favicon/android-icon-192x192.png')
+  link(rel='icon' type='image/png' sizes='32x32' href='favicon/favicon-32x32.png')
+  link(rel='icon' type='image/png' sizes='96x96' href='favicon/favicon-96x96.png')
+  link(rel='icon' type='image/png' sizes='16x16' href='favicon/favicon-16x16.png')
+  link(rel='manifest' href='favicon/manifest.json')
+  meta(name='msapplication-TileColor' content='#ffffff')
+  meta(name='msapplication-TileImage' content='favicon/ms-icon-144x144.png')
+  meta(name='theme-color' content='#ffffff')
 // nav_bar
 nav.nav_bar.hidden
   .nav_left
     .nav_logo
-      a(href='/')
+      a(href='index')
         img(src='img/nav_logo.svg')
   .nav_right
     ul
@@ -31,8 +47,7 @@ nav.nav_bar.hidden
     .main_left
       h1 Te conectamos con quienes quieren verte crecer
       h2
-        | Si tu actividad se vio afectada total o parcialmente por el COVID-19 y
-        | tienes una idea de c&oacute;mo reactivarte, conoce a los voluntarios que te
+        | Si tu actividad se vio afectada total o parcialmente por el COVID-19 y tienes una idea de c&oacute;mo reactivarte, conoce a los voluntarios que te
         | quieren ayudar.
       .main_buttons
         .main_button_left
@@ -40,8 +55,8 @@ nav.nav_bar.hidden
             .button_principal
               span TENGO UN NEGOCIO
         .main_button_right
-          a(href='https://preparados.typeform.com/to/mnC1wG')
-            .button_third
+          a(href='proyectos')
+            .button_secondary
               span QUIERO AYUDAR
     .main_right
       img(src='img/composicion_logo.svg')
@@ -123,45 +138,41 @@ nav.nav_bar.hidden
     .negocios_left
       h3 Ayudar es todo ganancia
       p
-        | Si tienes conocimientos espec&iacute;ficos o simplemente te gusta la
-        | tecnolog&iacute;a, &uacute;nete y suma experiencia asesorando a quienes lo necesitan. Ya
-        | ver&aacute;s lo bien que se siente ayudar a otras personas.
+        | Si tienes conocimientos espec&iacute;ficos o simplemente te gusta la tecnolog&iacute;a, &uacute;nete y suma experiencia asesorando a quienes lo necesitan. Ya ver&aacute;s lo bien que se siente ayudar a otras personas.
+      br
+      p Puedes empezar eligiendo algunos de los casos que ya esperan ser resueltos:
       .negocios_button
-        a(href='https://preparados.typeform.com/to/mnC1wG')
+        a(href='proyectos')
           .button_secondary
-            span QUIERO AYUDAR
+            span VER CASOS
       p(style='padding-top: 100px;')
-        | Si quieres comenzar ya mismo, estos son los
-        | casos abiertos en los que puedes colaborar.
+        | Si quieres inscribirte y recibir informaci&oacute;n de c&oacute;mo crece nuestra comunidad y hacerte llegar casos seg&uacute;n tu perfil, completa el formulario y as&iacute; lo haremos:
       .negocios_button
         a(href='https://preparados.typeform.com/to/mnC1wG')
           .button_secondary
-            span VER CASOS ABIERTOS
+            span SER VOLUNTARIO
     .negocios_right
       img(src='img/dialogo_4.svg')
     div(style='clear:both;')
 // Footer
 .footer
-  .footer_1
-    .footer_left
-      h3 &iquest;Nos ayudas a conocerte?
-      p
-        | Intentaremos que nuestra comunidad crezca y as&iacute; hay m&aacute;s voluntarios que
-        | est&eacute;n dispuestos a asesorarte. 
-        br
-        br
-        | &iexcl;&Aacute;nimo! &iexcl;Ahora las cosas solo
-        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;pueden mejorar!
-      .footer_button
-        a(href='https://preparados.typeform.com/to/a6SYuS')
-          .button_principal(style='box-shadow: 10px 10px 20px #0D0D0E;')
-            span IR A LA ENCUESTA
-    .footer_right
-      img(src='img/footer_logo.svg')
-    div(style='clear:both;')
+  .webmap
+    ul
+      li
+        a(href='index')
+          p Inicio
+      li
+        a(href='proyectos')
+          p Casos abiertos
+      li
+        a(href='quienes_somos')
+          p Quienes somos
+      li
+        a(href='faqs')
+          p Preguntas frecuentes
   .footer_2
     .footer_left
-      h3 S&iacute;guenos y comparte
+      h3(style='margin: 20px 0;') S&iacute;guenos y comparte
       .social
         a(href='https://twitter.com/conecta_esp')
           img(src='img/twitter.svg')
@@ -171,17 +182,17 @@ nav.nav_bar.hidden
           img(src='img/facebook.svg')
       p
         | Si tienes dudas o quieres saludarnos, nos puedes escribir a 
-        a(href='ToDo emailContacto') hola@conecta-digital.com
+        a(href='hola@conecta-digital.com') hola@conecta-digital.com
+        | .
+    .footer_right
+      img(src='img/footer_logo.svg')
     div(style='clear:both;')
   .footer_1
     .footer_left
-      h3(style='font-size: 1.8em;')
-        | Gracias por apoyar proyectos solidarios como
-        | este
+      h3(style='font-size: 1.8em;') Gracias por apoyar proyectos solidarios como este
     .negocios_right
-      img(style='width: 40%; margin-top: 30px;float: left;padding: initial;' src='img/typeform_logo.svg')
-      img(style='width: 40%; margin-top: 30px;\
-      float: right;padding: initial;' src='img/godaddy_logo.svg')
+      img(style='width: 40%; float: left;padding: initial;' src='img/typeform_logo.svg')
+      img(style='width: 40%; float: right;padding: initial;' src='img/godaddy_logo.svg')
     div(style='clear:both;')
 // <script src="lib/jquery-3.5.0.min.js"></script>
 script(src='lib/jquery-3.4.1.min.js' type='text/javascript')

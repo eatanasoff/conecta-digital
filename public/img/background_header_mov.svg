@@ -1,58 +1,42 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg width="375px" height="469px" viewBox="0 0 375 469" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<svg width="375px" height="277px" viewBox="0 0 375 277" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
     <!-- Generator: Sketch 64 (93537) - https://sketch.com -->
     <title>background_header_mov</title>
     <desc>Created with Sketch.</desc>
     <g id="background_header_mov" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <rect fill="#F0F2FD" x="0" y="0" width="375" height="469"></rect>
-        <g id="Conecta-Copy-3" transform="translate(13.000000, -1.000000)">
+        <rect fill="#F0F2FD" x="0" y="0" width="375" height="277"></rect>
+        <g id="Conecta-Copy-3" transform="translate(9.000000, -277.000000)">
             <g id="background">
-                <line x1="28.5" y1="414.124733" x2="28.1173503" y2="1" id="Line-3-Copy-3" stroke="#FFFFFF" stroke-linecap="square"></line>
-                <line x1="5.5" y1="219.124733" x2="5.94236654" y2="1" id="Line-3-Copy-6" stroke="#FFFFFF" stroke-linecap="square"></line>
-                <line x1="68.5" y1="72.1247335" x2="68.9722249" y2="1" id="Line-3-Copy-7" stroke="#FFFFFF" stroke-linecap="square"></line>
-                <line x1="334.033333" y1="34.5" x2="334.5" y2="0.5" id="Line-3-Copy-4" stroke="#FFFFFF" stroke-linecap="square"></line>
-                <line x1="348.314543" y1="171.124733" x2="348.751042" y2="1" id="Line-3-Copy-8" stroke="#FFFFFF" stroke-linecap="square"></line>
-                <line x1="311.5" y1="414.5" x2="311.34471" y2="1.37526652" id="Line-3-Copy-5" stroke="#FFFFFF" stroke-linecap="square"></line>
-                <g id="green_square" transform="translate(341.000000, 163.000000)">
+                <line x1="34.5" y1="517.124733" x2="34.1173503" y2="104" id="Line-3-Copy-3" stroke="#FFFFFF" stroke-linecap="square"></line>
+                <line x1="5.5" y1="398.124733" x2="5.94236654" y2="180" id="Line-3-Copy-6" stroke="#FFFFFF" stroke-linecap="square"></line>
+                <line x1="348.314543" y1="350.124733" x2="348.751042" y2="180" id="Line-3-Copy-8" stroke="#FFFFFF" stroke-linecap="square"></line>
+                <line x1="311.5" y1="413.124733" x2="311.34471" y2="0" id="Line-3-Copy-5" stroke="#FFFFFF" stroke-linecap="square"></line>
+                <g id="green_square" transform="translate(341.000000, 342.000000)">
                     <g id="Group-20-Copy" transform="translate(-3.654107, 0.314509)">
-                        <path d="M4.1949448,12.0914131 L4.25022837,3.90886232 L12.036338,1.83408844e-13 L19.7761869,3.90886232 L19.7209033,12.0914131 L11.9347937,16.0002754 L4.1949448,12.0914131 Z" id="Combined-Shape" fill="#1CD6BF"></path>
+                        <path d="M4.1949448,12.0914131 L4.25022837,3.90886232 L12.036338,1.80300219e-13 L19.7761869,3.90886232 L19.7209033,12.0914131 L11.9347937,16.0002754 L4.1949448,12.0914131 Z" id="Combined-Shape" fill="#1CD6BF"></path>
                         <polygon id="Rectangle" fill="#1DE0C8" transform="translate(8.085449, 9.961631) rotate(-45.000000) translate(-8.085449, -9.961631) " points="9.65349223 2.96976681 3.82846372 8.71661254 6.5373803 16.9534952 12.342434 11.2920468"></polygon>
                         <polygon id="Rectangle" fill="#0BCDB5" transform="translate(15.885683, 9.984761) rotate(-45.000000) translate(-15.885683, -9.984761) " points="8.83837156 11.4446716 17.1079655 14.1862995 22.932994 8.43945376 14.6434253 5.78322326"></polygon>
                     </g>
                 </g>
-                <g id="green_square" transform="translate(19.000000, 404.624733)">
-                    <g id="Group-20-Copy" transform="translate(-4.152394, 0.357397)">
-                        <path d="M4.76698272,13.7402421 L4.82980496,4.441889 L13.6776568,2.0250468e-13 L22.4729396,4.441889 L22.4101174,13.7402421 L13.5622655,18.1821311 L4.76698272,13.7402421 Z" id="Combined-Shape" fill="#1CD6BF"></path>
-                        <polygon id="Rectangle" fill="#1DE0C8" transform="translate(9.188010, 11.320035) rotate(-45.000000) translate(-9.188010, -11.320035) " points="10.9698775 3.37473501 4.35052696 9.90524152 7.42884125 19.2653355 14.0254932 12.8318714"></polygon>
-                        <polygon id="Rectangle" fill="#0BCDB5" transform="translate(18.051912, 11.346320) rotate(-45.000000) translate(-18.051912, -11.346320) " points="10.043604 13.0053087 19.4408699 16.1207949 26.0602205 9.59028837 16.640256 6.57184461"></polygon>
+                <g id="purple_square" transform="translate(26.000000, 508.000000)">
+                    <g id="Group-20-Copy-4" transform="translate(-3.980769, 0.342857)">
+                        <path d="M4.56995625,13.1812641 L4.63018195,4.26118488 L13.1123389,1.90070182e-13 L21.5440997,4.26118488 L21.483874,13.1812641 L13.001717,17.442449 L4.56995625,13.1812641 Z" id="Combined-Shape" fill="#808EDE"></path>
+                        <polygon id="Rectangle" fill="#8A99EA" transform="translate(8.808242, 10.859524) rotate(-45.000000) translate(-8.808242, -10.859524) " points="10.5196379 3.23945896 4.16960343 9.50432146 7.1186459 18.4795894 13.446881 12.3077973"></polygon>
+                        <polygon id="Rectangle" fill="#6B7BDA" transform="translate(17.305814, 10.884722) rotate(-45.000000) translate(-17.305814, -10.884722) " points="9.62534472 12.4782793 18.6362482 15.4629573 24.9862827 9.19809483 15.9535799 6.30648726"></polygon>
                     </g>
                 </g>
-                <g id="yellow_square" transform="translate(303.000000, 406.000000)">
+                <g id="yellow_square" transform="translate(303.000000, 405.624733)">
                     <g id="Group-20" transform="translate(-3.654107, 0.314509)">
-                        <path d="M4.1949448,12.0914131 L4.25022837,3.90886232 L12.036338,1.76747506e-13 L19.7761869,3.90886232 L19.7209033,12.0914131 L11.9347937,16.0002754 L4.1949448,12.0914131 Z" id="Combined-Shape" fill="#FFD24F"></path>
+                        <path d="M4.1949448,12.0914131 L4.25022837,3.90886232 L12.036338,1.72306613e-13 L19.7761869,3.90886232 L19.7209033,12.0914131 L11.9347937,16.0002754 L4.1949448,12.0914131 Z" id="Combined-Shape" fill="#FFD24F"></path>
                         <polygon id="Rectangle" fill="#FBD874" transform="translate(8.085449, 9.961631) rotate(-45.000000) translate(-8.085449, -9.961631) " points="9.65349223 2.96976681 3.82846372 8.71661254 6.5373803 16.9534952 12.342434 11.2920468"></polygon>
                         <polygon id="Rectangle" fill="#F6C73E" transform="translate(15.885683, 9.984761) rotate(-45.000000) translate(-15.885683, -9.984761) " points="8.83837156 11.4446716 17.1079655 14.1862995 22.932994 8.43945376 14.6434253 5.78322326"></polygon>
                     </g>
                 </g>
-                <g id="red_square" transform="translate(0.000000, 212.624733)">
+                <g id="red_square" transform="translate(0.000000, 391.624733)">
                     <g id="Group-20-Copy-5" transform="translate(-2.657532, 0.228734)">
-                        <path d="M3.05086894,8.79375496 L3.09107517,2.84280896 L8.75370035,1.25677246e-13 L14.3826814,2.84280896 L14.3424751,8.79375496 L8.67984995,11.6365639 L3.05086894,8.79375496 Z" id="Combined-Shape" fill="#FF7B7A"></path>
+                        <path d="M3.05086894,8.79375496 L3.09107517,2.84280896 L8.75370035,1.2390089e-13 L14.3826814,2.84280896 L14.3424751,8.79375496 L8.67984995,11.6365639 L3.05086894,8.79375496 Z" id="Combined-Shape" fill="#FF7B7A"></path>
                         <polygon id="Rectangle" fill="#FB8887" transform="translate(5.880326, 7.244823) rotate(-45.000000) translate(-5.880326, -7.244823) " points="7.02072162 2.1598304 2.78433725 6.33935457 4.7544584 12.3298147 8.97631564 8.2123977"></polygon>
                         <polygon id="Rectangle" fill="#F06766" transform="translate(11.553224, 7.261645) rotate(-45.000000) translate(-11.553224, -7.261645) " points="6.42790659 8.32339756 12.4421567 10.3173087 16.6785411 6.13778455 10.6497638 4.20598055"></polygon>
-                    </g>
-                </g>
-                <g id="orange_square" transform="translate(328.000000, 28.019190)">
-                    <g id="Group-20-Copy-2" transform="translate(-2.657532, 0.228734)">
-                        <path d="M3.05086894,8.79375496 L3.09107517,2.84280896 L8.75370035,1.2922996e-13 L14.3826814,2.84280896 L14.3424751,8.79375496 L8.67984995,11.6365639 L3.05086894,8.79375496 Z" id="Combined-Shape" fill="#FFA737"></path>
-                        <polygon id="Rectangle" fill="#FCAF4C" transform="translate(5.880326, 7.244823) rotate(-45.000000) translate(-5.880326, -7.244823) " points="7.02072162 2.1598304 2.78433725 6.33935457 4.7544584 12.3298147 8.97631564 8.2123977"></polygon>
-                        <polygon id="Rectangle" fill="#FB9C24" transform="translate(11.553224, 7.261645) rotate(-45.000000) translate(-11.553224, -7.261645) " points="6.42790659 8.32339756 12.4421567 10.3173087 16.6785411 6.13778455 10.6497638 4.20598055"></polygon>
-                    </g>
-                </g>
-                <g id="yellow_square" transform="translate(63.000000, 59.916844)">
-                    <g id="Group-20" transform="translate(-2.657532, 0.228734)">
-                        <path d="M3.05086894,8.79375496 L3.09107517,2.84280896 L8.75370035,1.32782674e-13 L14.3826814,2.84280896 L14.3424751,8.79375496 L8.67984995,11.6365639 L3.05086894,8.79375496 Z" id="Combined-Shape" fill="#FFD24F"></path>
-                        <polygon id="Rectangle" fill="#FBD874" transform="translate(5.880326, 7.244823) rotate(-45.000000) translate(-5.880326, -7.244823) " points="7.02072162 2.1598304 2.78433725 6.33935457 4.7544584 12.3298147 8.97631564 8.2123977"></polygon>
-                        <polygon id="Rectangle" fill="#F6C73E" transform="translate(11.553224, 7.261645) rotate(-45.000000) translate(-11.553224, -7.261645) " points="6.42790659 8.32339756 12.4421567 10.3173087 16.6785411 6.13778455 10.6497638 4.20598055"></polygon>
                     </g>
                 </g>
             </g>

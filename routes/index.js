@@ -18,6 +18,14 @@ router.get('/index', function (req, res, next) {
   res.render('index', { title: 'Home' });
 });
 
+router.get('/faqs', function (req, res, next) {
+  res.render('faqs', { title: 'faqs' });
+});
+
+router.get('/quienes_somos', function (req, res, next) {
+  res.render('quienes_somos', { title: 'quienes_somos' });
+});
+
 /* Nosotros. */
 router.get('/proyectos', function (req, res, next) {
   var encuestas = [];
@@ -167,5 +175,65 @@ router.post('/addlike', function (req, finalRes, next) {
   }
   
 });
+
+/* Likes */
+router.get('/addVoluntario', function (req, finalRes, next) {
+  console.log("Entrando en add voluntario")
+  var ok = {
+    error: false,
+    codigo: 200,
+    mensaje: 'Todo OK',
+  };
+  var error = {
+    error: true,
+    codigo: 404,
+    mensaje: "form_not_found",
+  }
+  var collection = "other";
+  var myobj = req.query;
+  console.log(myobj)
+  var o_id = new mongo.ObjectID(myobj.id);
+  if (myobj.id) {
+    MongoClient.connect(url, function (err, db) {
+      if (err) throw err;
+      var dbo = db.db('conecta');
+      // update a record in the collection
+      dbo
+        .collection('negocios')
+        .updateOne(
+          // find record with name "MyServer"
+          {'_id': o_id},
+          // increment it's property called "ran" by 1
+          { $push: { "email": myobj.email } },
+          function(err, res) {
+            if (err) throw err;
+            console.log("1 document updated");
+            dbo
+              .collection('negocios')
+              .find({})
+              .sort({'_id': -1})
+              .toArray(function (err, result) {
+                if (err) throw err;
+                encuestas = result.map((i) => ({ ...i }));
+                db.close();
+                console.log(encuestas);
+                console.log('despues de cerrar DB');
+                finalRes.render('proyectos', {
+                  title: 'Proyectos',
+                  data: encuestas,
+                });
+              });
+            db.close();
+          }
+        );
+      })
+  }
+  else {
+    finalRes.send(error)
+  }
+  
+});
+
+
 
 module.exports = router;

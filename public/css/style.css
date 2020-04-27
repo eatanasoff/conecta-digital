@@ -99,6 +99,13 @@ a{
 	min-width: 180px; 
 }
 
+.button_third:disabled,
+button_third[disabled] {
+	border: solid 1px #FFD24F;
+	background-color: #FFFFFF;
+	color: #FFD24F;
+}
+
 /*buttons hover - a*/
 
 .button_principal:hover {
@@ -120,14 +127,6 @@ a{
 }
 
 .button_secondary a {
-	color: #FFFFFF;
-}
-
-.button_third a {
-	color: #022B4B;
-}
-
-.button_third a:hover {
 	color: #FFFFFF;
 }
 
@@ -275,6 +274,7 @@ li a{
 	background-image: url("../img/background_negocios.svg");
   	background-repeat: no-repeat;
   	background-size: cover;
+  	padding-bottom: 190px;
 }  
 
 .negocios_1 {
@@ -313,6 +313,7 @@ li a{
 	width: 100%;
   	background-color: #1B1B1F;
   	color: #FFFFFF;
+  	padding-bottom: 150px;
 }  
 
 .footer_1 {
@@ -322,7 +323,7 @@ li a{
 }
 
 .footer_2 {
-	padding: 0 0 150px;
+	padding-top: 50px;
     width: 80%;
     margin: auto;
 }
@@ -336,10 +337,6 @@ li a{
 	width: 40%;
 	float: right;
 	text-align: center;
-}
-
-.footer_right img{
-	display: none;
 }
 
 .footer_button{
@@ -365,6 +362,28 @@ li a{
 .social a {
 	padding-right: 70px;
 }
+
+
+
+.webmap{
+	width: 80%;
+    margin: auto;
+}
+
+.webmap ul{
+	width: 80%;
+	min-width: 600px;
+	float: left;
+}
+
+.webmap ul li{
+	padding-right: 40px;
+}
+
+.webmap ul li a p{
+	color: #0BCDB5;
+}
+
 
 
 
@@ -513,7 +532,8 @@ ul {
 	background-image: url("../img/background_negocios_mov.svg");
   	background-repeat: no-repeat;
   	background-size: cover;
-	padding: 50px 0 0;
+  	padding-bottom: 190px;
+
 }  
 
 .negocios_1{
@@ -583,13 +603,17 @@ ul {
 /*footer*/
 .footer {
 	width: 100%;
-	padding: 80px 0;
+	padding: 20px 0 80px;
 }  
 
 .footer_1{
 	padding: 10px 0 50px;
     width: 80%;
     margin: auto;
+}
+
+.footer_2 {
+	padding-top: 0;
 }
 
 .footer_left{
@@ -605,6 +629,10 @@ ul {
 	padding-top: 35px;
 }
 
+.footer_right img{
+	display: none;
+}
+
 .footer_button{
 	width: 80%;
 	max-width: 310px;
@@ -615,6 +643,30 @@ ul {
 .social a{
 	padding: 35px 35px 35px 0;
 } 
+
+
+
+.webmap{
+	width: 80%;
+    margin: auto;
+    padding-bottom: 80px;
+}
+
+.webmap ul{
+	width: 100%;
+	min-width: initial;
+	float: initial;
+	display: block;
+    position: initial;
+    padding: initial;
+}
+
+.webmap ul li{
+	padding-right: 40px;
+	max-height: 40px;
+}
+
+
 
 
 }
