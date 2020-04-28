@@ -102,10 +102,6 @@ nav.nav_bar
           span#descripcion_necesidad #{data.form_response.answers[6].choice.label}
         else
           span#descripcion_necesidad #{data.form_response.answers[6].choice.other}
-      p
-        // Pregunta 8 - Por último, danos tu email para que cuando un voluntario quiera ayudarte pueda ponerse en contacto contigo. - Acá debería completar el href para poder escribirle. Este campo es opcional.
-        a(href='mailto:elcorreo@gmail.com')
-          span#descripcion_necesidad #{data.form_response.answers[7].email}
       .feed_calltoaction(style='border-top: solid 1px #F0F2FD;width: 100%; float: initial;margin: auto;')
         p
           | Si quieres ayudar en este caso, completa el email y acepta los t&eacute;rminos y condiciones.
