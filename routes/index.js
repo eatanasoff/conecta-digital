@@ -210,24 +210,12 @@ router.get('/addVoluntario', function (req, finalRes, next) {
         function (err, res) {
           if (err) throw err;
           console.log('1 document updated');
-          dbo
-            .collection('negocios')
-            .find({})
-            .sort({ _id: -1 })
-            .toArray(function (err, result) {
-              if (err) throw err;
-              encuestas = result.map((i) => ({ ...i }));
-              db.close();
-              console.log(encuestas);
-              console.log('despues de cerrar DB');
-              finalRes.render('proyectos', {
-                title: 'Proyectos',
-                data: encuestas,
-              });
-            });
-          db.close();
+          finalRes.render('thanks', {
+            title: 'Gracias',
+          });
         }
       );
+      db.close();
     });
   } else {
     finalRes.send(error);
