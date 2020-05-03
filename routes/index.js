@@ -181,7 +181,7 @@ router.post('/addlike', function (req, finalRes, next) {
 });
 
 /* Likes */
-router.get('/addVoluntario', function (req, finalRes, next) {
+router.post('/addVoluntario', function (req, finalRes, next) {
   console.log('Entrando en add voluntario');
   var ok = {
     error: false,
@@ -194,7 +194,7 @@ router.get('/addVoluntario', function (req, finalRes, next) {
     mensaje: 'form_not_found',
   };
   var collection = 'other';
-  var myobj = req.query;
+  var myobj = req.body;
   console.log(myobj);
   var o_id = new mongo.ObjectID(myobj.id);
   if (myobj.id) {
