@@ -54,6 +54,10 @@ module.exports = {
         template: 'views/quienes_somos.pug',
         filename: 'quienes_somos.html'
       })
+      new HtmlWebpackPlugin({
+        template: 'views/thanks.pug',
+        filename: 'thanks.html'
+      })
     ],
     mode: 'production',
     output: {
