@@ -29,6 +29,9 @@ head
   meta(name='msapplication-TileColor' content='#ffffff')
   meta(name='msapplication-TileImage' content='favicon/ms-icon-144x144.png')
   meta(name='theme-color' content='#ffffff')
+  script.
+    window.onload = amplitude.getInstance().logEvent('PAGINA_HOME');
+
 // nav_bar
 nav.nav_bar.hidden
   .nav_left

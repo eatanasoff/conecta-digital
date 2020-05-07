@@ -5,16 +5,8 @@ router.use(bodyParser.urlencoded({ extended: false }));
 router.use(bodyParser.json());
 var MongoClient = require('mongodb').MongoClient;
 var mongo = require('mongodb');
-var url =
-  'mongodb://' +
-  process.env.MONGO_USER +
-  ':' +
-  process.env.MONGO_PASS +
-  '@' +
-  process.env.MONGO_URL +
-  ':' +
-  process.env.MONGO_PORT +
-  '/conecta';
+
+var url = 'mongodb://service:zxcvbnm@localhost:27018/conecta';
 
 console.log('URL definida: ' + url);
 /* GET home page. */

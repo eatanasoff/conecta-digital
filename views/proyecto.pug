@@ -4,7 +4,7 @@ head
   meta(name='viewport' content='width=device-width, initial-scale=1, shrink-to-fit=no')
   title Conecta a quienes tienen un negocio con voluntarios que los ayudan a crecer
   link(rel='stylesheet' href='/css/feed_style.css')
-  //script(src='/js/script.js')
+  script(src='/js/script.js')
   link(href='https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600;700;800;900&display=swap' rel='stylesheet')
   meta(property='og:title' content='Conecta Digital España')
   meta(name='description' content='Te conectamos con quienes quieren verte crecer')
@@ -29,6 +29,7 @@ head
   meta(name='theme-color' content='#ffffff')
 
 script.
+  window.onload = amplitude.getInstance().logEvent('PAGINA_PROYECTO');
   function terms_changed() {
   var checkBox = document.getElementById("terms_and_conditions");
   var text = document.getElementById("submit_button");
@@ -105,7 +106,7 @@ nav.nav_bar
       .feed_calltoaction(style='border-top: solid 1px #F0F2FD;width: 100%; float: initial;margin: auto;')
         p
           | Si quieres ayudar en este caso, completa el email y acepta los t&eacute;rminos y condiciones.
-        form(action='/addVoluntario')
+        form(action='/addVoluntario' method='post' onsubmit='amplitude.getInstance().logEvent(\'BOTON_HACERCASOSUBMIT\')')
           label(for='email-voluntario') Dinos tu email:
           input#email-voluntario(type='email' name='email' placeholder='Escribe tu email aquí' required)
           br

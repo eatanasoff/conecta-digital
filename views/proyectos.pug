@@ -4,6 +4,7 @@ head
   meta(name='viewport' content='width=device-width, initial-scale=1, shrink-to-fit=no')
   title Conecta a quienes tienen un negocio con voluntarios que los ayudan a crecer
   link(rel='stylesheet' href='css/feed_style.css')
+  script(src='/js/script.js')
   link(href='https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600;700;800;900&display=swap' rel='stylesheet')
   meta(property='og:title' content='Conecta Digital España')
   meta(name='description' content='Te conectamos con quienes quieren verte crecer')
@@ -26,6 +27,9 @@ head
   meta(name='msapplication-TileColor' content='#ffffff')
   meta(name='msapplication-TileImage' content='favicon/ms-icon-144x144.png')
   meta(name='theme-color' content='#ffffff')
+  script.
+    window.onload = amplitude.getInstance().logEvent('PAGINA_PROYECTOS');
+
 // nav_bar
 nav.nav_bar
   .nav_left
@@ -97,7 +101,7 @@ nav.nav_bar
           p
             | Si crees que puedes ayudar a resolver el caso, &iexcl;t&oacute;malo!
         .feed_button
-          a(href='proyecto/'+url)
+          a(href='proyecto/'+url onClick='amplitude.getInstance().logEvent(\'BOTON_TOMARCASODETALLE\')')
             .button_third
               span TOMAR CASO
         div(style='clear:both;')
