@@ -8,9 +8,9 @@ head
   link(href='https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600;700;800;900&display=swap' rel='stylesheet')
   meta(property='og:title' content='Conecta Digital España')
   meta(name='description' content='Te conectamos con quienes quieren verte crecer')
-  meta(property='og:image' content='/conecta-logo.png')
-  // /favicon
-  link(rel='apple-touch-icon' sizes='57x57' href='/favicon/apple-icon-57x57.png')
+  meta(property='og:image' content='conecta-logo.png')
+  // favicon
+  link(rel='apple-touch-icon' sizes='57x57' href='favicon/apple-icon-57x57.png')
   link(rel='apple-touch-icon' sizes='60x60' href='/favicon/apple-icon-60x60.png')
   link(rel='apple-touch-icon' sizes='72x72' href='/favicon/apple-icon-72x72.png')
   link(rel='apple-touch-icon' sizes='76x76' href='/favicon/apple-icon-76x76.png')
@@ -44,8 +44,12 @@ script.
 nav.nav_bar
   .nav_left
     .nav_logo
-      a(href='index')
+      a(href='/index')
         img(src='/img/nav_logo.svg')
+  .nav_right
+    ul
+      li
+        a(style='background-color: #FFD24F;' href='/proyectos') VOLVER
 // main
 .header
   .header_main
@@ -123,7 +127,7 @@ nav.nav_bar
           br
           button#submit_button.button_third(type='submit' disabled) HACER ESTE CASO
       if data.email
-        p(style='font-size: 0.9em;	border-top: solid 1px #F0F2FD;')
+        p(style='font-size: 0.9em;  border-top: solid 1px #F0F2FD;')
           br
           | Personas interesadas en resolver este caso: #{data.email.length}
           // agregar recuento de veces que se hizo click al CTA "QUIERO HACER ESTE CASO"

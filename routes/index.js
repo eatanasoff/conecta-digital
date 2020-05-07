@@ -8,6 +8,9 @@ var mongo = require('mongodb');
 
 var url = 'mongodb://service:zxcvbnm@localhost:27018/conecta';
 
+const mailjet = require ('node-mailjet')
+  .connect(process.env.MJ_APIKEY_PUBLIC, process.env.MJ_APIKEY_PRIVATE)
+
 console.log('URL definida: ' + url);
 /* GET home page. */
 router.get('/', function (req, res, next) {
@@ -193,6 +196,74 @@ router.post('/addVoluntario', function (req, finalRes, next) {
     MongoClient.connect(url, function (err, db) {
       if (err) throw err;
       var dbo = db.db('conecta');
+            dbo.collection('negocios')
+        .find({ _id: o_id })
+        .toArray(function (err, result) {
+          if (err) throw err;
+          result[0].form_response.answers.forEach(function(answer){
+            if(answer.type=='email'){
+              const request_voluntario = mailjet
+                .post("send", {'version': 'v3.1'})
+                .request({
+                  "Messages":[
+                    {
+                      "From": {
+                        "Email": "hola@conecta-digital.com",
+                        "Name": "Conecta Digital"
+                      },
+                      "To": [
+                        {
+                          "Email": myobj.email
+                        }
+                      ],
+                      "TemplateID": 1391845,
+                      "TemplateLanguage": true,
+                      "Variables": {
+                        "negocio": answer.email
+                      }
+                    }
+                  ]
+                })
+              request_voluntario
+                .then((result) => {
+                  console.log(result.body)
+                })
+                .catch((err) => {
+                  console.log("Email voluntario error: " + err.statusCode)
+                })
+              
+              const request_negocio = mailjet
+                .post("send", {'version': 'v3.1'})
+                .request({
+                  "Messages":[
+                    {
+                      "From": {
+                        "Email": "hola@conecta-digital.com",
+                        "Name": "Conecta Digital"
+                      },
+                      "To": [
+                        {
+                          "Email": answer.email
+                        }
+                      ],
+                      "TemplateID": 1391834,
+                      "TemplateLanguage": true,
+                      "Variables": {
+                        "voluntario": myobj.email
+                      }
+                    }
+                  ]
+                })
+              request_negocio
+                .then((result) => {
+                  console.log(result.body)
+                })
+                .catch((err) => {
+                  console.log("Email negocio error: " + err.statusCode)
+                });
+            }
+          });
+      });
       // update a record in the collection
       dbo.collection('negocios').updateOne(
         // find record with name "MyServer"

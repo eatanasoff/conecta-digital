@@ -34,7 +34,7 @@ head
 nav.nav_bar
   .nav_left
     .nav_logo
-      a(href='index.html')
+      a(href='index')
         img(src='img/nav_logo.svg')
   .nav_right
     ul
@@ -49,6 +49,7 @@ nav.nav_bar
     div(style='clear:both;')
 // main
 .feed
+  // Inicio Caso
   each encuesta in data
     - var url = encuesta._id
     // Inicio Caso
@@ -106,43 +107,49 @@ nav.nav_bar
               span TOMAR CASO
         div(style='clear:both;')
   // Fin Caso
-  // Footer
-  .footer
-    .webmap
-      ul
-        li
-          a(href='index')
-            p Inicio
-        li
-          a(href='proyectos')
-            p Casos abiertos
-        li
-          a(href='quienes_somos')
-            p Quienes somos
-        li
-          a(href='faqs')
-            p Preguntas frecuentes
-    .footer_2
-      .footer_left
-        h3(style='margin: 20px 0;') S&iacute;guenos y comparte
-        .social
-          a(href='https://twitter.com/conecta_esp')
-            img(src='img/twitter.svg')
-          a(href='https://www.instagram.com/conectadigital_es')
-            img(src='img/instagram.svg')
-          a(href='https://www.facebook.com/ConectaDigitalEsp/')
-            img(src='img/facebook.svg')
-        p
-          | Si tienes dudas o quieres saludarnos, nos puedes escribir a 
-          a(href='hola@conecta-digital.com') hola@conecta-digital.com
-          | .
-      .footer_right
-        img(src='img/footer_logo.svg')
-      div(style='clear:both;')
-    .footer_1
-      .footer_left
-        h3(style='font-size: 1.8em;') Gracias por apoyar proyectos solidarios como este
-      .negocios_right
-        img(style='width: 40%; float: left;padding: initial;' src='img/typeform_logo.svg')
-        img(style='width: 40%; float: right;padding: initial;' src='img/godaddy_logo.svg')
-      div(style='clear:both;')
+// Footer
+.footer
+  .webmap
+    ul
+      li
+        a(href='index')
+          p Inicio
+      li
+        a(href='proyectos')
+          p Casos abiertos
+      li
+        a(href='quienes_somos')
+          p Quienes somos
+      li
+        a(href='faqs')
+          p Preguntas frecuentes
+      li
+        a(href='docs/termsandconditions_conecta-digital.pdf')
+          p T&eacute;rminos y condiciones
+      li
+        a(href='docs/personalinfo-conecta-digital.pdf')
+          p Pol&iacute;tica de privacidad
+  .footer_2
+    .footer_left
+      h3(style='margin: 20px 0;') S&iacute;guenos y comparte
+      .social
+        a(href='https://twitter.com/conecta_esp')
+          img(src='img/twitter.svg')
+        a(href='https://www.instagram.com/conectadigital_es')
+          img(src='img/instagram.svg')
+        a(href='https://www.facebook.com/ConectaDigitalEsp/')
+          img(src='img/facebook.svg')
+      p
+        | Si tienes dudas o quieres saludarnos, nos puedes escribir a 
+        a(href='mailto:hola@conecta-digital.com') hola@conecta-digital.com
+        | .
+    .footer_right
+      img(src='img/footer_logo.svg')
+    div(style='clear:both;')
+  .footer_1
+    .footer_left
+      h3(style='font-size: 1.8em;') Gracias por apoyar proyectos solidarios como este
+    .negocios_right
+      img(style='width: 40%; float: left;padding: initial;' src='img/typeform_logo.svg')
+      img(style='width: 40%; float: right;padding: initial;' src='img/godaddy_logo.svg')
+    div(style='clear:both;')
