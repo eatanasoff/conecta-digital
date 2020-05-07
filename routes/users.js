@@ -2,9 +2,16 @@ var express = require('express');
 var router = express.Router();
 var MongoClient = require('mongodb').MongoClient;
 var mongo = require('mongodb');
-//var url = 'mongodb://'+process.env.MONGO_USER+':'+process.env.MONGO_PASS+'@'+process.env.MONGO_URL+':'+process.env.MONGO_PORT+'/conecta';
-var url = 'mongodb://service:zxcvbnm@localhost:27018/conecta';
-//var url = 'mongodb://user:password@localhost:27017/conecta';
+var url =
+  'mongodb://' +
+  process.env.MONGO_USER +
+  ':' +
+  process.env.MONGO_PASS +
+  '@' +
+  process.env.MONGO_URL +
+  ':' +
+  process.env.MONGO_PORT +
+  '/conecta';
 
 /* Nosotros. */
 router.get('/', function (req, res, next) {
