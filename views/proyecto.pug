@@ -110,7 +110,7 @@ nav.nav_bar
       .feed_calltoaction(style='border-top: solid 1px #F0F2FD;width: 100%; float: initial;margin: auto;')
         p
           | Si quieres ayudar en este caso, completa el email y acepta los t&eacute;rminos y condiciones.
-        form(action='/addVoluntario' method='post' onsubmit='amplitude.getInstance().logEvent(\'BOTON_HACERCASOSUBMIT\')')
+        form(action='/addVoluntario' method='post' onsubmit='amplitude.getInstance().logEvent(\'BOTON_PROYECTO_QUIEROAYUDAR\')')
           label(for='email-voluntario') Dinos tu email:
           input#email-voluntario(type='email' name='email' placeholder='Escribe tu email aquí' required)
           br
@@ -125,7 +125,7 @@ nav.nav_bar
           input#prodId(name='id' type='hidden' value=url)
           br
           br
-          button#submit_button.button_third(type='submit' disabled) HACER ESTE CASO
+          button#submit_button.button_third(type='submit' disabled) QUIERO AYUDAR
       if data.email
         p(style='font-size: 0.9em;  border-top: solid 1px #F0F2FD;')
           br

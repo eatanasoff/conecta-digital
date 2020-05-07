@@ -41,9 +41,9 @@ nav.nav_bar.hidden
   .nav_right
     ul
       li
-        a(style='background-color: #0BCDB5;' href='https://preparados.typeform.com/to/a6SYuS') TENGO UN NEGOCIO
+        a(style='background-color: #0BCDB5;' onClick='amplitude.getInstance().logEvent(\'BOTON_HOME_NAVBAR_TENGOUNNEGOCIO\')'  href='https://preparados.typeform.com/to/a6SYuS') TENGO UN NEGOCIO
       li#nav_casos
-        a(style='background-color: #FFD24F;' href='proyectos') VER CASOS
+        a(style='background-color: #FFD24F;' onClick='amplitude.getInstance().logEvent(\'BOTON_HOME_NAVBAR_VERCASOS\')'  href='proyectos') VER CASOS
 // main
 .header
   .header_main
@@ -54,11 +54,11 @@ nav.nav_bar.hidden
         | quieren ayudar.
       .main_buttons
         .main_button_left
-          a(href='https://preparados.typeform.com/to/a6SYuS')
+          a(href='https://preparados.typeform.com/to/a6SYuS' onClick='amplitude.getInstance().logEvent(\'BOTON_HOME_TENGOUNNEGOCIO\')' )
             .button_principal
               span TENGO UN NEGOCIO
         .main_button_right
-          a(href='proyectos')
+          a(href='proyectos' onClick='amplitude.getInstance().logEvent(\'BOTON_HOME_QUIEROAYUDAR\')' )
             .button_secondary
               span QUIERO AYUDAR
     .main_right
@@ -74,7 +74,7 @@ nav.nav_bar.hidden
         | imagen de tu marca y mejora tus t&eacute;cnicas de ventas. Si no lo tienes claro,
         | planifica el crecimiento de tu negocio y digitaliza tu actividad.
       .main_button_left
-        a(href='https://preparados.typeform.com/to/a6SYuS')
+        a(href='https://preparados.typeform.com/to/a6SYuS' onClick='amplitude.getInstance().logEvent(\'BOTON_HOME_TENGOUNNEGOCIO2\')' )
           .button_principal
             span TENGO UN NEGOCIO
     .section1_right
@@ -100,7 +100,7 @@ nav.nav_bar.hidden
         | No cobramos comisiones ni suscripci&oacute;n. Queremos crear una comunidad que
         | se ayuda mutuamente sin esperar una retribuci&oacute;n econ&oacute;mica.
       .negocios_button
-        a(href='https://preparados.typeform.com/to/a6SYuS')
+        a(href='https://preparados.typeform.com/to/a6SYuS' onClick='amplitude.getInstance().logEvent(\'BOTON_HOME_TENGOUNNEGOCIO3\')' )
           .button_principal
             span TENGO UN NEGOCIO
     .negocios_right
@@ -114,7 +114,7 @@ nav.nav_bar.hidden
         | tu negocio. Si no lo tienes claro, cuenta tu situaci&oacute;n. Los voluntarios
         | intentar&aacute;n asesorarte de la mejor manera posible.
       .negocios_button
-        a(href='https://preparados.typeform.com/to/a6SYuS')
+        a(href='https://preparados.typeform.com/to/a6SYuS' onClick='amplitude.getInstance().logEvent(\'BOTON_HOME_ABRIRMICASO\')' )
           .button_principal
             span ABRIR MI CASO
     .negocios_right
@@ -131,7 +131,7 @@ nav.nav_bar.hidden
         | &iexcl;&Aacute;nimo! &iexcl;Ahora las cosas solo
         | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;pueden mejorar!
       .negocios_button
-        a(href='https://preparados.typeform.com/to/a6SYuS')
+        a(href='https://preparados.typeform.com/to/a6SYuS' onClick='amplitude.getInstance().logEvent(\'BOTON_HOME_NAVBAR_ABRIRMICASO2\')' )
           .button_principal
             span ABRIR MI CASO
     .negocios_right
@@ -145,13 +145,13 @@ nav.nav_bar.hidden
       br
       p Puedes empezar eligiendo algunos de los casos que ya esperan ser resueltos:
       .negocios_button
-        a(href='proyectos')
+        a(href='proyectos' onClick='amplitude.getInstance().logEvent(\'BOTON_HOME_VERCASOS\')' )
           .button_secondary
             span VER CASOS
       p(style='padding-top: 100px;')
         | Si quieres inscribirte y recibir informaci&oacute;n de c&oacute;mo crece nuestra comunidad y hacerte llegar casos seg&uacute;n tu perfil, completa el formulario y as&iacute; lo haremos:
       .negocios_button
-        a(href='https://preparados.typeform.com/to/mnC1wG')
+        a(href='https://preparados.typeform.com/to/mnC1wG' onClick='amplitude.getInstance().logEvent(\'BOTON_HOME_SERVOLUNTARIO\')' )
           .button_secondary
             span SER VOLUNTARIO
     .negocios_right

@@ -39,7 +39,7 @@ nav.nav_bar
   .nav_right
     ul
       li
-        a(style='background-color: #0BCDB5;' href='https://preparados.typeform.com/to/a6SYuS') ABRIR MI CASO
+        a(style='background-color: #0BCDB5;' onClick='amplitude.getInstance().logEvent(\'BOTON_PROYECTOS_NAVBAR_ABRIRMICASO\')' href='https://preparados.typeform.com/to/a6SYuS') ABRIR MI CASO
 // main
 .header
   .header_main
@@ -102,9 +102,9 @@ nav.nav_bar
           p
             | Si crees que puedes ayudar a resolver el caso, &iexcl;t&oacute;malo!
         .feed_button
-          a(href='proyecto/'+url onClick='amplitude.getInstance().logEvent(\'BOTON_TOMARCASODETALLE\')')
+          a(href='proyecto/'+url onClick='amplitude.getInstance().logEvent(\'BOTON_PROYECTOS_VERDETALLE\')')
             .button_third
-              span TOMAR CASO
+              span VER DETALLE
         div(style='clear:both;')
   // Fin Caso
 // Footer
