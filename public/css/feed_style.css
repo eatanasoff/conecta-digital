@@ -471,6 +471,14 @@ li a {
   -webkit-box-orient: vertical;
 }
 
+.caso_detalle #descripcion_actividad {
+  overflow: initial;
+  text-overflow: initial;
+  display: initial;
+  -webkit-line-clamp: initial;
+  -webkit-box-orient: initial;
+}
+
 #descripcion_necesidad {
   font-weight: 600;
 }

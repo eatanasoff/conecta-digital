@@ -82,9 +82,13 @@ nav.nav_bar
           span#sector #{data.form_response.answers[2].choice.label}
         else
           span#sector #{data.form_response.answers[2].choice.other}
-        | ,
+        //-| ,
         //- Pregunta 4 - ¿Dónde está tu negocio? - SingleChoice (listado de provincias)
-        span#provincia  #{data.form_response.answers[3].choice.label}
+        //-span#provincia  
+      p
+        //- Pregunta 5 - ¿Puedes hacer una breve descripción del funcionamiento y la situación de tu negocio? - Texto libre
+        span#descripcion_actividad
+          | #{data.form_response.answers[0].text} nos cont&oacute; lo siguiente de su negocio ubicado en #{data.form_response.answers[3].choice.label}:
       p
         //- Pregunta 5 - ¿Puedes hacer una breve descripción del funcionamiento y la situación de tu negocio? - Texto libre
         span#descripcion_actividad
@@ -111,7 +115,6 @@ nav.nav_bar
         p
           | Si quieres ayudar en este caso, completa el email y acepta los t&eacute;rminos y condiciones.
         form(action='/addVoluntario' method='post' onsubmit='amplitude.getInstance().logEvent(\'BOTON_PROYECTO_QUIEROAYUDAR\')')
-          label(for='email-voluntario') Dinos tu email:
           input#email-voluntario(type='email' name='email' placeholder='Escribe tu email aquí' required)
           br
           input#terms_and_conditions(type='checkbox' value='1' onclick='terms_changed()')
