@@ -56,22 +56,22 @@ nav.nav_bar
     .main_left
       h3 An&iacute;mate
       p
-        | Quiz&aacute;s este sea el caso en el que podr&iacute;as colaborar para reactivar la econom&iacute;a de alguien que lo necesita.
+        | Completa tus datos para ayudar en este caso.
     div(style='clear:both;')
 // main
-.feed
+.detalle
   // Inicio Caso
   - var url = data._id
-  .caso_feed
+  .caso_detalle
     .info_formulario
       h5
-        // Pregunta 1 - ¿Cuál es tu nombre? - texto Libre
-        span#nombre_persona #{data.form_response.answers[0].text}
-        |  -
-        // Pregunta 2 - ¿Y el nombre de tu negocio? - texto Libre
+        //- Pregunta 1 - ¿Cuál es tu nombre? - texto Libre
+        //-span#nombre_persona #{data.form_response.answers[0].text}
+        //-|  -
+        //- Pregunta 2 - ¿Y el nombre de tu negocio? - texto Libre
         span#nombre_negocio  #{data.form_response.answers[1].text}
       h6
-        //
+        //-
           Pregunta 3 - ¿De qué es el negocio? - SingleChoice:
           · Restauración (bares, restaurantes, cafeterías, etc.)
           · Salud (cuidado personal y deporte, fisioterapia, nutrición, dentista, etc.)
@@ -83,18 +83,18 @@ nav.nav_bar
         else
           span#sector #{data.form_response.answers[2].choice.other}
         | ,
-        // Pregunta 4 - ¿Dónde está tu negocio? - SingleChoice (listado de provincias)
+        //- Pregunta 4 - ¿Dónde está tu negocio? - SingleChoice (listado de provincias)
         span#provincia  #{data.form_response.answers[3].choice.label}
       p
-        // Pregunta 5 - ¿Puedes hacer una breve descripción del funcionamiento y la situación de tu negocio? - Texto libre
+        //- Pregunta 5 - ¿Puedes hacer una breve descripción del funcionamiento y la situación de tu negocio? - Texto libre
         span#descripcion_actividad
           | #{data.form_response.answers[4].text}
       p
-        // Pregunta 6 - Pon aquí tu web, si tienes - Acá debería completar el href para que vaya al sitio. Este campo es opcional.
+        //- Pregunta 6 - Pon aquí tu web, si tienes - Acá debería completar el href para que vaya al sitio. Este campo es opcional.
         a(href='#{data.form_response.answers[5].url}')
           span#descripcion_necesidad #{data.form_response.answers[5].url}
       p
-        //
+        //-
           Pregunta 7 - ¿Crees que alguna de estas iniciativas podría ayudarte a asegurar la continuidad de tu negocio? - SingleChoice:
           · Crear una web
           · Añadir la posibilidad de vender online
@@ -130,7 +130,7 @@ nav.nav_bar
         p(style='font-size: 0.9em;  border-top: solid 1px #F0F2FD;')
           br
           | Personas interesadas en resolver este caso: #{data.email.length}
-          // agregar recuento de veces que se hizo click al CTA "QUIERO HACER ESTE CASO"
+          //- agregar recuento de veces que se hizo click al CTA "QUIERO HACER ESTE CASO"
   // Fin Caso
   p(style='margin: 20px auto 100px;text-align: center;')
     a(href='/proyectos') Volver al listado de casos

@@ -99,13 +99,6 @@ a{
 	min-width: 180px; 
 }
 
-.button_third:disabled,
-button_third[disabled] {
-	border: solid 1px #FFD24F;
-	background-color: #FFFFFF;
-	color: #FFD24F;
-}
-
 /*buttons hover - a*/
 
 .button_principal:hover {
@@ -127,6 +120,14 @@ button_third[disabled] {
 }
 
 .button_secondary a {
+	color: #FFFFFF;
+}
+
+.button_third a {
+	color: #022B4B;
+}
+
+.button_third a:hover {
 	color: #FFFFFF;
 }
 
@@ -157,6 +158,11 @@ nav {
 	width: 85%;
 }
 
+.nav_right ul li a{
+	padding: 10px;
+	margin-left: 20px;
+}
+
 ul {
 	display: flex;
     position: relative;
@@ -176,9 +182,7 @@ li a{
 	font-family: 'Raleway', sans-serif;
 	line-height: 30px;
     letter-spacing: 1px;
-    padding: 10px;
     border-radius: 5px;
-    margin-left: 40px; 
 }
 
 /*header*/
@@ -371,7 +375,7 @@ li a{
 }
 
 .webmap ul{
-	width: 80%;
+	width: 100%;
 	min-width: 600px;
 	float: left;
 }
@@ -436,7 +440,7 @@ ul {
 .header {
 	width: 100%;
     min-height: 100px;
-    padding-top: 80px;
+    padding-top: 40px;
 }
 
 .header_main {
@@ -503,7 +507,7 @@ ul {
 }  
 
 .section1_main{
-	padding: 50px 0 110px;
+	padding: 50px 0 60px;
     width: 80%;
     margin: auto;
 }
