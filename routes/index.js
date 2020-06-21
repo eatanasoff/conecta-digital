@@ -42,6 +42,10 @@ router.get('/quienes_somos', function (req, res, next) {
   res.render('quienes_somos', { title: 'quienes_somos' });
 });
 
+router.get('/options', function (req, res, next) {
+  res.render('options', { title: 'options' });
+});
+
 /* Nosotros. */
 router.get('/proyectos', function (req, res, next) {
   var encuestas = [];

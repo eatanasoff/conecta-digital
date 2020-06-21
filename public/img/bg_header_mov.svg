@@ -3,26 +3,23 @@
     <title>bg_header_mov</title>
     <g id="bg_header_mov" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
         <rect fill="#F0F2FD" x="0" y="0" width="375" height="277"></rect>
-        <g id="Conecta-Copy-3" transform="translate(9.000000, -172.000000)">
+        <g id="Conecta-Copy-3" transform="translate(9.000000, 65.000000)">
             <g id="background">
-                <line x1="308.5" y1="413.124733" x2="308.11735" y2="0" id="Line-3-Copy-3" stroke="#FFFFFF" stroke-linecap="square"></line>
-                <line x1="5.5" y1="293.124733" x2="5.94236654" y2="75" id="Line-3-Copy-6" stroke="#FFFFFF" stroke-linecap="square"></line>
-                <line x1="348.314543" y1="245.124733" x2="348.751042" y2="75" id="Line-3-Copy-8" stroke="#FFFFFF" stroke-linecap="square"></line>
-                <g id="green_square" transform="translate(341.000000, 237.000000)">
+                <g id="green_square" transform="translate(341.000000, 0.000000)">
                     <g id="Group-20-Copy" transform="translate(-3.654107, 0.314509)">
                         <path d="M4.1949448,12.0914131 L4.25022837,3.90886232 L12.036338,1.80300219e-13 L19.7761869,3.90886232 L19.7209033,12.0914131 L11.9347937,16.0002754 L4.1949448,12.0914131 Z" id="Combined-Shape" fill="#1CD6BF"></path>
                         <polygon id="Rectangle" fill="#1DE0C8" transform="translate(8.085449, 9.961631) rotate(-45.000000) translate(-8.085449, -9.961631) " points="9.65349223 2.96976681 3.82846372 8.71661254 6.5373803 16.9534952 12.342434 11.2920468"></polygon>
                         <polygon id="Rectangle" fill="#0BCDB5" transform="translate(15.885683, 9.984761) rotate(-45.000000) translate(-15.885683, -9.984761) " points="8.83837156 11.4446716 17.1079655 14.1862995 22.932994 8.43945376 14.6434253 5.78322326"></polygon>
                     </g>
                 </g>
-                <g id="purple_square" transform="translate(300.000000, 404.000000)">
+                <g id="purple_square" transform="translate(300.000000, 167.000000)">
                     <g id="Group-20-Copy-4" transform="translate(-3.980769, 0.342857)">
                         <path d="M4.56995625,13.1812641 L4.63018195,4.26118488 L13.1123389,1.90070182e-13 L21.5440997,4.26118488 L21.483874,13.1812641 L13.001717,17.442449 L4.56995625,13.1812641 Z" id="Combined-Shape" fill="#808EDE"></path>
                         <polygon id="Rectangle" fill="#8A99EA" transform="translate(8.808242, 10.859524) rotate(-45.000000) translate(-8.808242, -10.859524) " points="10.5196379 3.23945896 4.16960343 9.50432146 7.1186459 18.4795894 13.446881 12.3077973"></polygon>
                         <polygon id="Rectangle" fill="#6B7BDA" transform="translate(17.305814, 10.884722) rotate(-45.000000) translate(-17.305814, -10.884722) " points="9.62534472 12.4782793 18.6362482 15.4629573 24.9862827 9.19809483 15.9535799 6.30648726"></polygon>
                     </g>
                 </g>
-                <g id="red_square" transform="translate(0.000000, 286.624733)">
+                <g id="red_square" transform="translate(0.000000, 49.624733)">
                     <g id="Group-20-Copy-5" transform="translate(-2.657532, 0.228734)">
                         <path d="M3.05086894,8.79375496 L3.09107517,2.84280896 L8.75370035,1.2390089e-13 L14.3826814,2.84280896 L14.3424751,8.79375496 L8.67984995,11.6365639 L3.05086894,8.79375496 Z" id="Combined-Shape" fill="#FF7B7A"></path>
                         <polygon id="Rectangle" fill="#FB8887" transform="translate(5.880326, 7.244823) rotate(-45.000000) translate(-5.880326, -7.244823) " points="7.02072162 2.1598304 2.78433725 6.33935457 4.7544584 12.3298147 8.97631564 8.2123977"></polygon>

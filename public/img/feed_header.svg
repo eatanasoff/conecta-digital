@@ -17,12 +17,7 @@
                     <use xlink:href="#path-2"></use>
                 </mask>
                 <use id="Rectangle" fill="url(#linearGradient-1)" xlink:href="#path-2"></use>
-                <line x1="892.375" y1="70" x2="892" y2="-210" id="Line-3-Copy-2" stroke="#FFFFFF" stroke-linecap="square" mask="url(#mask-3)"></line>
-                <line x1="778.706267" y1="175" x2="778.572751" y2="-136" id="Line-3-Copy-3" stroke="#FFFFFF" stroke-linecap="square" mask="url(#mask-3)"></line>
-                <line x1="821.5" y1="151.5" x2="821.066758" y2="-136" id="Line-3-Copy-10" stroke="#FFFFFF" stroke-linecap="square" mask="url(#mask-3)"></line>
-                <line x1="673.5" y1="76.5" x2="673.171875" y2="-92" id="Line-3-Copy-4" stroke="#FFFFFF" stroke-linecap="square" mask="url(#mask-3)"></line>
-                <line x1="18.5" y1="138.5" x2="18.171875" y2="-92" id="Line-3-Copy-9" stroke="#FFFFFF" stroke-linecap="square" mask="url(#mask-3)"></line>
-                <line x1="962.328125" y1="109" x2="962" y2="-136" id="Line-3-Copy-5" stroke="#FFFFFF" stroke-linecap="square" mask="url(#mask-3)"></line>
+  
                 <g id="green_square" mask="url(#mask-3)">
                     <g transform="translate(770.455026, 170.000000)" id="Group-20-Copy">
                         <g transform="translate(-3.779508, 0.323810)">

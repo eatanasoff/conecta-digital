@@ -4,7 +4,7 @@ head
   meta(name='viewport' content='width=device-width, initial-scale=1,\
   shrink-to-fit=no')
   title Conecta a quienes tienen un negocio con voluntarios que los ayudan a crecer
-  link(rel='stylesheet' href='/css/style.css')
+  link(rel='stylesheet' href='css/style.css')
   script(src='js/script.js')
   link(href='https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600;700;800;900&display=swap' rel='stylesheet')
   meta(property='og:title' content='Conecta Digital España')
@@ -31,7 +31,6 @@ head
   meta(name='theme-color' content='#ffffff')
   script.
     window.onload = amplitude.getInstance().logEvent('PAGINA_HOME');
-
 // nav_bar
 nav.nav_bar.hidden
   .nav_left
@@ -41,43 +40,74 @@ nav.nav_bar.hidden
   .nav_right
     ul
       li
-        a(style='background-color: #0BCDB5;' onClick='amplitude.getInstance().logEvent(\'BOTON_HOME_NAVBAR_TENGOUNNEGOCIO\')'  href='https://preparados.typeform.com/to/a6SYuS') TENGO UN NEGOCIO
+        a(style='background-color: #0BCDB5;' onClick='amplitude.getInstance().logEvent(\'BOTON_HOME_NAVBAR_TENGOUNNEGOCIO\')'  href='https://preparados.typeform.com/to/aFiLik8L') TENGO UN NEGOCIO
       li#nav_casos
         a(style='background-color: #FFD24F;' onClick='amplitude.getInstance().logEvent(\'BOTON_HOME_NAVBAR_VERCASOS\')'  href='proyectos') VER CASOS
 // main
 .header
   .header_main
     .main_left
-      h1 Te conectamos con quienes quieren verte crecer
+      h1 Conectamos peque&ntilde;os comercios con voluntarios que quieren verlos crecer
       h2
-        | Si tu actividad se vio afectada total o parcialmente por el COVID-19 y tienes una idea de c&oacute;mo reactivarte, conoce a los voluntarios que te
-        | quieren ayudar.
+        | Si tu actividad se vio afectada total o parcialmente por el COVID-19 y tienes una idea de c&oacute;mo reactivarte, conoce a los voluntarios que te quieren ayudar.
       .main_buttons
         .main_button_left
-          a(href='https://preparados.typeform.com/to/a6SYuS' onClick='amplitude.getInstance().logEvent(\'BOTON_HOME_TENGOUNNEGOCIO\')' )
+          a(style='background-color: #0BCDB5;' onClick='amplitude.getInstance().logEvent(\'BOTON_HOME_NAVBAR_TENGOUNNEGOCIO\')'  href='https://preparados.typeform.com/to/aFiLik8L')
             .button_principal
               span TENGO UN NEGOCIO
         .main_button_right
-          a(href='proyectos' onClick='amplitude.getInstance().logEvent(\'BOTON_HOME_QUIEROAYUDAR\')' )
+          a(style='background-color: #FFD24F;' onClick='amplitude.getInstance().logEvent(\'BOTON_HOME_NAVBAR_VERCASOS\')'  href='proyectos')
             .button_secondary
               span QUIERO AYUDAR
     .main_right
       img(src='img/composicion_logo.svg')
     div(style='clear:both;')
-// section1
-#section1.section1
-  .section1_main
-    .section1_left
-      h3 Conecta
+// negocios
+.negocios
+  .negocios_1
+    .negocios_left
+      h3 &iquest;Tienes un negocio? Cu&eacute;ntanos c&oacute;mo ayudarte
       p
-        | Crea una web o una tienda online para ampliar tu negocio, renueva la
-        | imagen de tu marca y mejora tus t&eacute;cnicas de ventas. Si no lo tienes claro,
-        | planifica el crecimiento de tu negocio y digitaliza tu actividad.
-      .main_button_left
-        a(href='https://preparados.typeform.com/to/a6SYuS' onClick='amplitude.getInstance().logEvent(\'BOTON_HOME_TENGOUNNEGOCIO2\')' )
+        | Dinos qu&eacute; te gustar&iacute;a hacer: vender online, mejorar tus redes sociales o crear una marca que te destaque y llegar a m&aacute;s clientes. No cobramos comisiones ni suscripci&oacute;n.
+      .negocios_button
+        a(style='background-color: #0BCDB5;' onClick='amplitude.getInstance().logEvent(\'BOTON_HOME_NAVBAR_TENGOUNNEGOCIO\')'  href='https://preparados.typeform.com/to/aFiLik8L')
           .button_principal
             span TENGO UN NEGOCIO
-    .section1_right
+    .negocios_right
+      img(src='img/dialogo_1.svg')
+    div(style='clear:both;')
+  .negocios_1
+    .negocios_left
+      img(src='img/dialogo_4.svg')
+    .negocios_right
+      h3 &iquest;Quieres ayudar a los peque&ntilde;os negocios?
+      p
+        | Si quieres dar una mano de 
+        span#font_strong manera desinteresada
+        | , puedes comenzar con alguno de los casos que ya est&aacute;n esperando tu ayuda.
+        br
+        br
+        | &Uacute;nete a esta comunidad de voluntarios y suma experiencia asesorando a comercios afectados.
+      .negocios_button
+        a(href='proyectos')
+          .button_secondary
+            span QUIERO AYUDAR
+    div(style='clear:both;')
+  .negocios_1
+    .negocios_left
+      h3 &iquest;Tu actividad podr&iacute;a ayudar a otros negocios?
+      p
+        | Si tienes una agencia de marketing, de dise&ntilde;o, te dedicas a desarrollar tiendas online o cualquier otra tarea que podr&iacute;an necesitar los comercios para digitalizarse, puedes escribirnos a 
+        a(href='mailto:hola@conecta-digital.com') hola@conecta-digital.com
+        |  y le daremos visibilidad a tu propuesta.
+        br
+        br
+        | Si tienes un negocio y quieres comenzar ya, pide presupuestos en el siguiente enlace.
+      .negocios_button
+        a(href='options')
+          .button_third
+            span VER OPCIONES
+    .negocios_right
       h4
         | Tienda Online
         br
@@ -91,118 +121,123 @@ nav.nav_bar.hidden
         br
         | Digitalizaci&oacute;n
     div(style='clear:both;')
-// negocios
-.negocios
-  .negocios_1
+  // StopCorona
+  .one_row
     .negocios_left
-      h3 Todo 100% gratis para siempre
+      h5 Felices con este proyecto
       p
-        | No cobramos comisiones ni suscripci&oacute;n. Queremos crear una comunidad que
-        | se ayuda mutuamente sin esperar una retribuci&oacute;n econ&oacute;mica.
-      .negocios_button
-        a(href='https://preparados.typeform.com/to/a6SYuS' onClick='amplitude.getInstance().logEvent(\'BOTON_HOME_TENGOUNNEGOCIO3\')' )
-          .button_principal
-            span TENGO UN NEGOCIO
-    .negocios_right
-      img(src='img/dialogo_1.svg')
+        | Conecta Digital es uno de los ganadores de #StopCorona, una iniciativa que promueve iniciativas tecnol&oacute;gicas que contribuyan a ganar la batalla sanitaria del COVID-19 mediante la tecnolog&iacute;a.
+        a(href='https://www.stopcorona.es/ganadores/')
+          |  Ver m&aacute;s detalles.
+    .main_right
+      img(src='img/stopcorona_logo.svg')
     div(style='clear:both;')
-  .negocios_1
-    .negocios_left
-      h3 Abre tu caso para conocerte
-      p
-        | Crea un caso contando a qu&eacute; te dedicas y c&oacute;mo cre&eacute;s que podr&iacute;as mejorar
-        | tu negocio. Si no lo tienes claro, cuenta tu situaci&oacute;n. Los voluntarios
-        | intentar&aacute;n asesorarte de la mejor manera posible.
-      .negocios_button
-        a(href='https://preparados.typeform.com/to/a6SYuS' onClick='amplitude.getInstance().logEvent(\'BOTON_HOME_ABRIRMICASO\')' )
-          .button_principal
-            span ABRIR MI CASO
-    .negocios_right
-      img(src='img/dialogo_2.svg')
-    div(style='clear:both;')
-  .negocios_1
-    .negocios_left
-      h3 Encontraremos el perfil indicado
-      p
-        | Intentaremos que nuestra comunidad crezca y as&iacute; hay m&aacute;s voluntarios que
-        | est&eacute;n dispuestos a asesorarte. 
-        br
-        br
-        | &iexcl;&Aacute;nimo! &iexcl;Ahora las cosas solo
-        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;pueden mejorar!
-      .negocios_button
-        a(href='https://preparados.typeform.com/to/a6SYuS' onClick='amplitude.getInstance().logEvent(\'BOTON_HOME_NAVBAR_ABRIRMICASO2\')' )
-          .button_principal
-            span ABRIR MI CASO
-    .negocios_right
-      img(src='img/dialogo_3.svg')
-    div(style='clear:both;')
-  .negocios_1
-    .negocios_left
-      h3 Ayudar es todo ganancia
-      p
-        | Si tienes conocimientos espec&iacute;ficos o simplemente te gusta la tecnolog&iacute;a, &uacute;nete y suma experiencia asesorando a quienes lo necesitan. Ya ver&aacute;s lo bien que se siente ayudar a otras personas.
-      br
-      p Puedes empezar eligiendo algunos de los casos que ya esperan ser resueltos:
-      .negocios_button
-        a(href='proyectos' onClick='amplitude.getInstance().logEvent(\'BOTON_HOME_VERCASOS\')' )
-          .button_secondary
-            span VER CASOS
-      p(style='padding-top: 100px;')
-        | Si quieres inscribirte y recibir informaci&oacute;n de c&oacute;mo crece nuestra comunidad y hacerte llegar casos seg&uacute;n tu perfil, completa el formulario y as&iacute; lo haremos:
-      .negocios_button
-        a(href='https://preparados.typeform.com/to/mnC1wG' onClick='amplitude.getInstance().logEvent(\'BOTON_HOME_SERVOLUNTARIO\')' )
-          .button_secondary
-            span SER VOLUNTARIO
-    .negocios_right
-      img(src='img/dialogo_4.svg')
-    div(style='clear:both;')
-// Footer
-.footer
-  .webmap
-    ul
-      li
-        a(href='index')
-          p Inicio
-      li
-        a(href='proyectos')
-          p Casos abiertos
-      li
-        a(href='quienes_somos')
-          p Quienes somos
-      li
-        a(href='faqs')
-          p Preguntas frecuentes
-      li
-        a(href='docs/termsandconditions_conecta-digital.pdf')
-          p T&eacute;rminos y condiciones
-      li
-        a(href='docs/personalinfo-conecta-digital.pdf')
-          p Pol&iacute;tica de privacidad
-  .footer_2
-    .footer_left
-      h3(style='margin: 20px 0;') S&iacute;guenos y comparte
-      .social
-        a(href='https://twitter.com/conectaespana')
-          img(src='img/twitter.svg')
-        a(href='https://www.instagram.com/conectadigital_es')
-          img(src='img/instagram.svg')
-        a(href='https://www.facebook.com/ConectaDigitalEsp/')
-          img(src='img/facebook.svg')
-      p
-        | Si tienes dudas o quieres saludarnos, nos puedes escribir a 
-        a(href='mailto:hola@conecta-digital.com') hola@conecta-digital.com
-        | .
-    .footer_right
-      img(src='img/footer_logo.svg')
-    div(style='clear:both;')
-  .footer_1
-    .footer_left
-      h3(style='font-size: 1.8em;') Gracias por apoyar proyectos solidarios como este
+  // Casos
+  .feed
+    .negocios_1
+      .negocios_left(style='margin-bottom: 100px;')
+        h3 Casos abiertos
+        p
+          | Estos son algunos de los casos que est&aacute;n abiertos y esperan de tu ayuda voluntaria y desinteresada.
+        .negocios_button(style='float: left;padding-bottom: 50px;')
+          a(href='proyectos')
+            .button_secondary
+              span VER TODOS
+      .main_right
+        img(src='img/conecta_conversacion.svg')
+      div(style='clear:both;')
+      // Inicio Caso
+      .caso_feed(style='margin-left: initial;')
+        .info_formulario
+          h5
+            span#nombre_negocio La Puerta Amarilla
+          p#descripcion_actividad
+            span
+              | Tengo un restaurante de carnes y hamburguesas y estoy sirviendo para domicilio. Pero dada la alta comisi&oacute;n que quitan las plataformas estaba pensando en hacer el reparto mediante mi propia app. Necesitar&iacute;a la parte del reparto.
+          p
+            span#descripcion_necesidad Quisiera poder vender online.
+          .feed_button
+            a(href='https://conecta-digital.com/proyecto/5eb5292fcb698e1371735211')
+              .button_secondary_ghost
+                span VER DETALLE
+      // Fin Caso
+      // Inicio Caso
+      .caso_feed
+        .info_formulario
+          h5
+            span#nombre_negocio La habitaci&oacute;n de Martina
+          p#descripcion_actividad
+            span
+              | La habitaci&oacute;n de Martina es una tienda on line de venta de ilustraci&oacute;n infantil, l&aacute;minas decorativas, &aacute;lbum ilustrado, juguetes y art&iacute;culos de decoraci&oacute;n. En estos momentos aceptamos pedidos on line pero por la dificultad de conciliar no podemos abarcar correctamente todo el trabajo en redes sociales y de actualizaci&oacute;n y mantenimiento de la web.
+          p
+            span#descripcion_necesidad Quisiera hacer marketing online.
+          .feed_button
+            a(href='https://conecta-digital.com/proyecto/5ebadb756c1cde26b9a4021b')
+              .button_secondary_ghost
+                span VER DETALLE
+      // Fin Caso
+      // Inicio Caso
+      .caso_feed
+        .info_formulario
+          h5
+            span#nombre_negocio LA-&Oacute;PTICA de Ciudad Lineal
+          p#descripcion_actividad
+            span
+              | Tengo una &oacute;ptica en Ciudad Lineal. Dado que el negocio se basa en ventas en el local querr&iacute;a encontrar la forma de vender online y hacer marketing digital.
+          p
+            span#descripcion_necesidad Quisiera hacer marketing online.
+          .feed_button
+            a(href='https://conecta-digital.com/proyecto/5eb3bcb3db9ab43e5d53857c')
+              .button_secondary_ghost
+                span VER DETALLE
+      div(style='clear:both;')
+      // Fin Caso
+  // Footer
+  .footer
+    .webmap
+      ul
+        li
+          a(href='index')
+            p Inicio
+        li
+          a(href='proyectos')
+            p Casos abiertos
+        li
+          a(href='quienes_somos')
+            p Quienes somos
+        li
+          a(href='faqs')
+            p Preguntas frecuentes
+        li
+          a(href='docs/termsandconditions_conecta-digital.pdf')
+            p T&eacute;rminos y condiciones
+        li
+          a(href='docs/personalinfo-conecta-digital.pdf')
+            p Pol&iacute;tica de privacidad
+    .footer_2
+      .footer_left
+        h3(style='margin: 20px 0;') S&iacute;guenos y comparte
+        .social
+          a(href='https://twitter.com/ConectaEspana')
+            img(src='img/twitter.svg')
+          a(href='https://www.instagram.com/conectadigital_es')
+            img(src='img/instagram.svg')
+          a(href='https://www.facebook.com/ConectaDigitalEsp/')
+            img(src='img/facebook.svg')
+        p
+          | Si tienes dudas o quieres saludarnos, nos puedes escribir a 
+          a(href='mailto:hola@conecta-digital.com') hola@conecta-digital.com
+          | .
+      .footer_right
+        img(src='img/footer_logo.svg')
+      div(style='clear:both;')
+    .footer_1
+      .footer_left
+        h3(style='font-size: 1.8em;') Gracias por apoyar proyectos solidarios como este
     .negocios_right
       img(style='width: 40%; float: left;padding: initial;' src='img/typeform_logo.svg')
       img(style='width: 40%; float: right;padding: initial;' src='img/godaddy_logo.svg')
     div(style='clear:both;')
-// <script src="lib/jquery-3.5.0.min.js"></script>
+
 script(src='lib/jquery-3.4.1.min.js' type='text/javascript')
 script(src='lib/main.js')
