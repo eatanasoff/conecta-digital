@@ -100,9 +100,13 @@ nav.nav_bar
           else
             span#descripcion_necesidad #{encuesta.form_response.answers[6].choice.other}
         .feed_button
-          a(href='proyecto/'+url onClick='amplitude.getInstance().logEvent(\'BOTON_PROYECTOS_VERDETALLE\')')
-            .button_third
-              span VER DETALLE
+          if (encuesta.isResolved)
+            .case_resolved
+              span &iexcl;RESUELTO!
+          else 
+            a(href='proyecto/'+url onClick='amplitude.getInstance().logEvent(\'BOTON_PROYECTOS_VERDETALLE\')')
+              .button_third
+                span VER DETALLE
     if (i == 3)
       .ser_voluntario
         .info_formulario
