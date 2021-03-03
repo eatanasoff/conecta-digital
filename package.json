@@ -24,7 +24,7 @@
     "node-mailjet": "^3.3.1",
     "node-sass": "^4.10.0",
     "popper.js": "^1.14.5",
-    "pug": "^2.0.4",
+    "pug": "^3.0.1",
     "resolve-url-loader": "^3.0.0"
   },
   "devDependencies": {
