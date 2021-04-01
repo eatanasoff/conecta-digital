@@ -1,0 +1,191 @@
+<!doctype html>
+<html lang="es">
+<head>
+
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<title>Conecta a quienes tienen un negocio con voluntarios que los ayudan a crecer</title>
+
+    <link rel="stylesheet" href="css/feed_style.css">
+    <script src="js/script.js"></script>
+	<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+	<meta property="og:title" content="Conecta Digital España">
+	<meta name="description" content="Te conectamos con quienes quieren verte crecer">
+	<meta property="og:image" content="conecta-logo.png">
+
+	<!-- Hotjar Tracking Code for conecta-digital.com -->
+<script>
+    (function(h,o,t,j,a,r){
+        h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+        h._hjSettings={hjid:1872370,hjsv:6};
+        a=o.getElementsByTagName('head')[0];
+        r=o.createElement('script');r.async=1;
+        r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+        a.appendChild(r);
+    })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+</script>
+
+
+	<!-- favicon -->
+	<link rel="apple-touch-icon" sizes="57x57" href="favicon/apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="favicon/apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="favicon/apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="favicon/apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="favicon/apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="favicon/apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="favicon/apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="favicon/apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="favicon/android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="favicon/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+<link rel="manifest" href="favicon/manifest.json">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="favicon/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+
+<script>
+	//JavaScript function that enables or disables a submit button depending
+//on whether a checkbox has been ticked or not.
+function terms_changed(termsCheckBox){
+    //If the checkbox has been checked
+    if(termsCheckBox.checked){
+        //Set the disabled property to FALSE and enable the button.
+        document.getElementById("submit_button").disabled = false;
+    } else{
+        //Otherwise, disable the submit button.
+        document.getElementById("submit_button").disabled = true;
+    }
+}
+</script>
+
+
+</head>
+<body style="background-color: #F0F2FD;">
+
+<!-- nav_bar -->
+
+<nav class="nav_bar">
+	<div class="nav_left">
+		<div class="nav_logo">
+    		<a href="index.html"><img src="img/nav_logo.svg"></a>
+    	</div>
+	</div>
+	<div  class="nav_right">
+  		<ul>
+   			<li><a style="background-color: #FFD24F;" href="feed_negocios">VOLVER</a></li>
+   		</ul>
+  	</div>
+	
+</nav>
+
+
+<!-- main -->
+<div class="header">
+    <div class="header_main">
+
+
+    	<div class="main_left">
+    		<h3 style="padding: initial;">Anímate</h3>
+    		<p>Completa tus datos para ayudar en este caso.</p>
+    	</div>
+
+    <div style="clear:both;"></div>
+
+
+	</div>
+</div>
+
+<!-- main -->
+<div class="feed">
+
+<!-- Inicio Caso --> 
+	<div class="caso_detalle">
+		<div class="info_formulario">
+			<h5>
+				<!-- Pregunta 2 - ¿Y el nombre de tu negocio? - texto Libre -->
+				<span id="nombre_negocio">Cervecería Barcelo</span>
+			</h5>
+			<h6>
+				<!-- Pregunta 3 - ¿De qué es el negocio? - SingleChoice:
+				· Restauración (bares, restaurantes, cafeterías, etc.) 
+				· Salud (cuidado personal y deporte, fisioterapia, nutrición, dentista, etc.)
+				· Comercio minorista (venta de alimentos, ropa, electrónica, etc.)
+				· Educación
+				· Otro-->
+				<span id="sector">Restauración (bares, restaurantes, cafeterías, etc.)</span>
+			</h6>
+			<p ><!-- Pregunta 1 - ¿Cuál es tu nombre? - texto Libre -->
+				<span id="nombre_persona">Juan Rodriguez</span> nos contó lo siguiente de su negocio ubicado en 				
+				<!-- Pregunta 4 - ¿Dónde está tu negocio? - SingleChoice (listado de provincias)-->
+				<span id="provincia">Barcelona</span>:<br><br>
+
+
+				<!-- Pregunta 5 - ¿Puedes hacer una breve descripción del funcionamiento y la situación de tu negocio? - Texto libre-->
+				<span id="descripcion_actividad">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</span>
+			</p>
+			<p>
+				<!-- Pregunta 6 - Pon aquí tu web, si tienes - Acá debería completar el href para que vaya al sitio. Este campo es opcional. -->
+				<a href="completarconsitioweb.com"><span id="descripcion_necesidad">sitioweb.com</span></a>
+			</p>
+			<p>
+				<!-- Pregunta 7 - ¿Crees que alguna de estas iniciativas podría ayudarte a asegurar la continuidad de tu negocio? - SingleChoice:
+					· Crear una web
+					· Añadir la posibilidad de vender online
+					· Hacer marketing online
+					· Hacer reparto a domicilio
+					· Entender mejor mis números para adaptarme a mis clientes
+					· Mejorar mi imagen de marca
+					· No sé qué podría hacer para asegurar la viabilidad-->
+				<span id="descripcion_necesidad">Quisiera vender online.</span>
+			</p>
+
+			<p>
+				<!-- Pregunta 8 - Por último, danos tu email para que cuando un voluntario quiera ayudarte pueda ponerse en contacto contigo. - Acá debería completar el href para poder escribirle. Este campo es opcional. -->
+				<a href="mailto:elcorreo@gmail.com"><span id="descripcion_necesidad" style="display: none;">elcorreo@gmail.com</span></a>
+			</p>
+
+
+			<div class="feed_calltoaction" style="border-top: solid 1px #F0F2FD;width: 100%; float: initial;margin: auto;">
+				<p>Si quieres ayudar, completa tu email y acepta los términos y condiciones.</p>
+
+				<form action="/addVoluntario" method="post" onsubmit="amplitude.getInstance().logEvent('BOTON_PROYECTO_QUIEROAYUDAR')">
+  					<label for="email-voluntario"></label>
+
+					<input type="email" id="email-voluntario" name="email" placeholder="Escribe tu email aquí" onfocus="this.value=''" required><br>
+
+  					 <input type="checkbox" id="terms_and_conditions" value="1" onclick="terms_changed()" />
+
+  					<label for="terms_and_conditions">Acepto los <a href="docs/termsandconditions_conecta-digital.pdf" target="_blank">términos y condiciones</a> y la <a href="docs/personalinfo-conecta-digital.pdf" target="_blank">política de privacidad</a>.</label><br><br><br>
+
+  				
+  					<button class="button_third" type="submit" id="submit_button" disabled>QUIERO AYUDAR</button>
+				</form>
+    				
+			</div>
+
+			<p style="font-size: 0.9em;	border-top: solid 1px #F0F2FD;"><br>Personas interesadas en resolver este caso: <!-- agregar recuento de veces que se hizo click al CTA "QUIERO HACER ESTE CASO" --></p>	
+
+	</div>
+
+
+
+   
+</div>
+
+
+
+<!-- Fin Caso -->
+
+	<p style="margin: 20px auto 100px;text-align: center;">
+		<a href="feed_negocios.html">Volver al listado de casos</a>
+	</p>
+
+
+
+
+
+</body>
